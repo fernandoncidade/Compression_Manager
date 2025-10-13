@@ -1,0 +1,65 @@
+COMPRESSION MANAGER
+Versão: 0.0.1.0
+Autores: Fernando Nillsson Cidade
+
+Resumo:
+COMPRESSION MANAGER é um utilitário gráfico leve para Windows projetado para empacotamento, extração e verificação de integridade de arquivos e pastas. Oferece suporte a múltiplos formatos (ZIP, 7Z, TAR, WIM e outros reconhecidos pelo 7‑Zip), seleção de vários diretórios de saída, métodos de compressão configuráveis, fila de processos e operação via arrastar-e-soltar. A interface é multilíngue (pt_BR / en_US) e preparada para empacotamento como executável (distribuição sem necessidade de instalação manual de dependências Python).
+
+Funcionalidades principais:
+- Compressão de pastas e arquivos nos formatos .zip, .7z, .tar e .wim.
+- Extração de arquivos compactados em diversos formatos suportados pelo 7‑Zip (.rar, .zip, .7z, .tar, .wim, .bz2, .tar.xz, .tgz, .tar.gz, .zipx, .lzh, .iso etc.).
+- Seleção e manutenção de múltiplos diretórios de saída por formato.
+- Arrastar e soltar (drag & drop) para adicionar arquivos e pastas às listas de entrada e saída.
+- Métodos de compressão configuráveis por formato (níveis 0–9 onde aplicável) e persistência das preferências.
+- Modo "Armazenar como" para criar pacotes com ajustes específicos sem alterar as configurações padrões.
+- Atualização de arquivos existentes (opção de atualizar arquivos compactados em vez de recriá‑los).
+- Teste de integridade de arquivos compactados (comando "t" do 7‑Zip) para validar pacotes.
+- Fila de compressão: novos pedidos podem aguardar enquanto outra tarefa do mesmo formato é executada.
+- Mensagens e diálogos traduzíveis; troca de idioma em tempo de execução.
+- Janela "Sobre" que exibe texto de descrição, histórico, licenças, avisos e política de privacidade carregados a partir dos recursos incluídos.
+- Operação offline: todos os dados são locais (arquivos de configuração e preferências armazenados no diretório persistente do usuário).
+
+Arquitetura e integração:
+- Base GUI: PySide6 (Qt) com widgets personalizados para facilitar seleção múltipla e arrastar-e-soltar.
+- Motor de compressão/extração: 7‑Zip (7zG.exe). O aplicativo procura por um executável 7‑Zip incluído junto ao aplicativo (diretório "7-Zip") ou nos caminhos padrão do sistema (Program Files). Se o 7‑Zip não for encontrado, operações de compressão/extracção não funcionarão e o usuário será avisado.
+- Threads: operações de compressão, extração e verificação são executadas em threads para manter a interface responsiva.
+- Persistência: preferências de compressão e idioma são salvas em arquivos JSON no diretório persistente do usuário (obter_caminho_persistente).
+
+Instalação e distribuição:
+- Projetado para ser empacotado como executável para Windows, incluindo recursos e traduções.
+- Quando distribuído como instalador/executável, o usuário final não precisa instalar dependências Python.
+- Diálogos de Abrir/Salvar usam as interfaces nativas do sistema quando possível.
+
+Privacidade e armazenamento de dados:
+- Configurações e preferências (por exemplo, config.json, language.json) são salvos localmente no caminho persistente do usuário (por exemplo, AppData).
+- Nenhum dado é enviado automaticamente para servidores externos pelo aplicativo.
+- Arquivos exportados (compactos, relatórios, etc.) são gravados no local escolhido pelo usuário.
+
+Como usar (resumo rápido):
+1. Adicione pastas/arquivos arrastando-os para a lista de entrada ou usando "Adicionar Pastas" / "Adicionar Arquivos".
+2. Especifique diretórios de saída para cada formato (botões "Especificar Saída" para .ZIP, .7Z, .TAR, .WIM e Extração).
+3. Selecione o método de compressão em Configurações → Selecionar Método de Compressão.
+4. Use "Armazenar" para iniciar a compressão no formato desejado.
+5. Marque múltiplas opções de formatos para exibir/ocultar layouts relacionados.
+6. Para testar integridade de arquivos compactados, selecione-os e execute "Testar Integridade".
+7. Para extrair, selecione arquivos compactados na lista de entrada e escolha um diretório de destino.
+
+Soluções de problemas comuns:
+- 7‑Zip não encontrado: verifique se o 7zG.exe está instalado no sistema ou disponível dentro da pasta "7-Zip" do aplicativo. Mensagens de erro instrutivas serão exibidas.
+- Erro ao gravar configurações: confirme permissões de escrita na pasta de usuário (AppData).
+- Arquivos não extraem corretamente: verifique se o formato é suportado e se o 7‑Zip está funcional.
+- Alto uso da CPU durante compressão: compressão em níveis altos (8–9) é intensiva; reduza o nível ou execute em momento apropriado.
+
+Limitações conhecidas:
+- Suporte de formatos e comportamento dependem do executável 7‑Zip presente no sistema.
+- Integração com PDFs/XLSX para importação/exportação (caso presente) requer conformidade de formato — use arquivos gerados por este aplicativo ou compatíveis.
+
+Licença:
+- Componentes de terceiros seguem suas respectivas licenças; informações completas sobre licenças e avisos inclusos estão disponíveis na janela "Sobre" e nos arquivos de licença distribuídos com o instalador.
+
+Contato e suporte:
+- Autor: Fernando Nillsson Cidade
+- Para sugestões, relatos de bugs e contribuições, consulte os canais indicados no instalador ou documentação anexa.
+
+Notas finais:
+Este documento descreve o conteúdo do diálogo "Sobre" e o comportamento do aplicativo quando distribuído como executável para Windows. Usuários avançados interessados em integração, automação ou local de armazenamento dos arquivos de configuração devem consultar a documentação técnica incluída no pacote ou o código-fonte para detalhes adicionais.

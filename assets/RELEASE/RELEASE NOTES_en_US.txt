@@ -1,0 +1,18 @@
+RELEASE NOTES: Version: 0.0.1.0
+
+Summary:
+Manager Compression is a lightweight graphical utility for Windows designed for packing, extracting and integrity-checking files and folders. It supports multiple formats (ZIP, 7Z, TAR, WIM and others recognized by 7‑Zip), multiple output directories per format, configurable compression methods, a process queue, and drag-and-drop operation. The interface is multilingual (pt_BR / en_US) and prepared for packaging as a standalone executable (no manual Python dependency installation required for end users).
+
+Key features:
+- Compress folders and files into .zip, .7z, .tar and .wim formats.
+- Extract compressed archives in many formats supported by 7‑Zip (.rar, .zip, .7z, .tar, .wim, .bz2, .tar.xz, .tgz, .tar.gz, .zipx, .lzh, .iso, etc.).
+- Select and persist multiple output directories, independently per format.
+- Drag & drop support to add files and folders to input and output lists.
+- Configurable compression methods per format (levels 0–9 where applicable) with preference persistence.
+- "Save As" mode to create packages with specific settings without changing default preferences.
+- Option to update existing archives instead of recreating them.
+- Archive integrity testing using 7‑Zip's "t" command to validate packages.
+- Compression queueing: new jobs can wait while another task of the same format runs.
+- Translatable messages and dialogs; runtime language switching.
+- "About" dialog displays description, history, licenses, notices and privacy policy loaded from included resources.
+- Offline operation: all data is stored locally (configuration and preference files saved in the user's persistent directory).

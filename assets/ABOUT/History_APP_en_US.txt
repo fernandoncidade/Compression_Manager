@@ -1,0 +1,40 @@
+History, Rationale and Motivation for Development
+
+Purpose
+I developed Manager Compression to automate routine backup, packaging and integrity-check tasks for my documents, files and folders. The goal was simple and pragmatic: save time and reduce operational friction so I could devote more energy to other daily activities — study, work and personal life — without losing control over my data.
+
+Technical and usability rationale
+In personal use I identified repetitive patterns: selecting multiple folders, choosing different destinations per format, adjusting compression methods and waiting for processes with little feedback. These activities consumed cognitive time and fragmented the workflow. Manager Compression aims to remove that friction by providing:
+- Predictable, minimalist flows (drag-and-drop, multi-selection).
+- Persistence of per-format preferences to avoid repeated manual reconfiguration.
+- Queues and threads to keep the UI responsive during long operations.
+- Integration with the 7‑Zip engine for wide compatibility and robustness.
+
+Personal context that motivated the project
+As a student and professional I repeatedly needed to recover project packages, deliver compressed copies under tight deadlines and maintain historical versions of documents. On several occasions manual processes led to lost versions or incomplete packages. The repetition of these incidents motivated the creation of a tool that:
+- Ensures consistent and verifiable packaging (integrity testing).
+- Simplifies configuring multiple output destinations.
+- Enables offline operation with full privacy control.
+
+A fantastic story (metaphor)
+Imagine a librarian who lives in a tower of books, guarding precious manuscripts. One day, a curious wind — the "Ghost Archive" — begins to scatter stacks, mix versions and spread incomplete copies. The librarian then builds a magical box, the Manager Compression: when a set of scrolls is placed inside, the box organizes, compresses and verifies each volume, stamps the version and stores secure copies in different corners of the tower. Whenever the wind blows, the box works in the background, keeping everything intact and accessible. This magical box is a metaphor for the purpose of this application: to protect your work, automate routines and give you back time to live and create.
+
+Expected impact for users
+- Reduced human errors when creating packages and backups.
+- Less time spent on repetitive file-management tasks.
+- Greater confidence when transferring and storing documents thanks to integrity testing and the option to update existing archives.
+- Preservation of privacy: all data remains local.
+
+Evolution and future vision
+The project grew from real needs and was iterated through everyday use. Planned future improvements include:
+- Accessibility enhancements (interfaces friendly to dyslexia/ADHD).
+- More integration options with local reminder systems.
+- Advanced automation features and scheduled compression queues.
+- Support for additional formats, driven by user demand.
+
+Acknowledgements and authorship
+Author: Fernando Nillsson Cidade.
+Special thanks to early testers whose practical feedback guided usability and resilience improvements.
+
+Final notes
+This history explains why Manager Compression was created: not only to package files, but to return time, reduce cognitive load and provide a reliable box for your data. For technical details and usage instructions, see ABOUT_pt_BR.txt and the documentation included with the distribution.

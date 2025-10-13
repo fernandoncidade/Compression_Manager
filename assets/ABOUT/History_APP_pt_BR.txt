@@ -1,0 +1,40 @@
+História, Justificativa e Motivação do Desenvolvimento
+
+Propósito
+Desenvolvi o Manager Compression para automatizar tarefas rotineiras de backup, empacotamento e verificação de integridade dos meus documentos, arquivos e pastas. O objetivo foi simples e pragmático: economizar tempo e reduzir a fricção operacional para que eu pudesse dedicar mais energia às demais tarefas diárias — estudo, trabalho e vida pessoal — sem perder controle sobre meus dados.
+
+Justificativa técnica e de usabilidade
+Em uso pessoal identifiquei padrões repetitivos: selecionar múltiplas pastas, escolher destinos distintos para formatos diferentes, ajustar métodos de compressão e aguardar processos sem feedback claro. Essas atividades consumiam tempo cognitivo e fragmentavam o fluxo de trabalho. O Manager Compression visa eliminar esse atrito por meio de:
+- Fluxos previsíveis e minimalistas (arrastar-e-soltar, seleção múltipla).
+- Persistência de preferências por formato, evitando reconfigurações manuais.
+- Filas e threads para manter a interface responsiva durante operações longas.
+- Integração com o motor 7‑Zip para compatibilidade ampla e robusta.
+
+Contexto pessoal que motivou o projeto
+Como estudante e profissional, precisei várias vezes recuperar pacotes de projeto, entregar cópias compactadas em prazos curtos e manter versões históricas de documentos. Em várias ocasiões, processos manuais resultaram em versões perdidas ou pacotes incompletos. A repetição desses incidentes motivou a criação de uma ferramenta que:
+- Garanta empacotamento consistente e verificável (teste de integridade).
+- Simplifique a configuração de múltiplos destinos de saída.
+- Permita operação offline com total controle de privacidade.
+
+Uma história fantástica (metáfora)
+Imagine um arquivista que vive em uma torre de livros, guardando manuscritos preciosos. Um dia, um vento curioso — o "Arquivo Fantasma" — começa a bagunçar pilhas, misturar versões e espalhar cópias incompletas. O arquivista cria então uma caixa mágica, o Manager Compression: ao colocar um conjunto de pergaminhos dentro dela, a caixa organiza, compacta e verifica cada tomo, marca a versão e guarda uma cópia segura em lugares distintos da torre. Sempre que o vento sopra, a caixa age em segundo plano, mantendo tudo íntegro e acessível. Essa caixa mágica é uma metáfora para o propósito deste aplicativo: proteger seu trabalho, automatizar rotinas e devolver tempo para viver e criar.
+
+Impacto esperado para o usuário
+- Redução de erros humanos na geração de pacotes e backups.
+- Menos tempo gasto em tarefas repetitivas de gerenciamento de arquivos.
+- Maior confiança na transferência e armazenamento de documentos, graças ao teste de integridade e à possibilidade de atualizar arquivos existentes.
+- Preservação da privacidade: todos os dados permanecem locais.
+
+Evolução e visão futura
+O projeto nasceu de necessidades reais e foi iterado conforme o uso cotidiano. Futuras melhorias previstas incluem:
+- Ajustes de acessibilidade (interfaces amigáveis a dislexia/TDAH).
+- Mais opções de integração com sistemas de lembretes locais.
+- Funcionalidades avançadas de automação e agendamento de filas de compressão.
+- Extensões para formatos adicionais, conforme demanda dos usuários.
+
+Agradecimentos e autoria
+Autor: Fernando Nillsson Cidade.
+Agradecimentos especiais a usuários que testaram versões iniciais e forneceram feedback prático que guiou refinamentos de usabilidade e resiliência do aplicativo.
+
+Notas finais
+Este histórico contextualiza o motivo pelo qual o Manager Compression foi criado: não apenas para empacotar arquivos, mas para devolver tempo, reduzir a carga cognitiva e oferecer uma caixa confiável para seus dados. Para detalhes técnicos e instruções de uso, consulte o arquivo ABOUT_pt_BR.txt e a documentação incluída no distribuidor.
