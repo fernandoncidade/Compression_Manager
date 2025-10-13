@@ -14,7 +14,7 @@
 
 # COMPRESSION MANAGER
 
-Versão: v0.0.0.0 — 13 de Outubro de 2025  
+Versão: v0.0.1.0 — 13 de Outubro de 2025  
 Autor: Fernando Nillsson Cidade
 
 **Total de downloads acumulados:**  
@@ -241,7 +241,7 @@ The license for original unRAR code has the following restriction:
 
 # COMPRESSION MANAGER
 
-Version: v0.0.0.0 — October 13, 2025  
+Version: v0.0.1.0 — October 13, 2025  
 Author: Fernando Nillsson Cidade
 
 **Total cumulative downloads:**  
