@@ -1,5 +1,5 @@
 END USER LICENSE AGREEMENT - COMPRESSION MANAGER
-Version 0.0.3.0, November 18, 2025
+Version 0.0.4.0, December 9, 2025
 
 Copyright (c) 2025 Fernando Nillsson Cidade. All rights reserved.
 
@@ -59,4 +59,4 @@ By installing, copying or using the Software distributed as an executable, you a
 Contact for information and support: channels and addresses provided in the installer/distribution.
 Author / Contact: Fernando Nillsson Cidade — E-mail: linceu_lighthouse@outlook.com
 
-Date: November 18, 2025
+Date: December 9, 2025

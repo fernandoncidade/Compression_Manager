@@ -1,3 +1,22 @@
+NOTAS DE LANÇAMENTO: Versão: 0.0.4.0
+09 de Dezembro de 2025
+
+O que foi feito:
+- Correção visual: foi ajustado o cálculo da largura da coluna onde ficam os rótulos e botões de saída, evitando que parte do texto dos rótulos ("Especificar Saída", "Armazenar ..." e "Limpar Saída") seja cortada.
+
+O que muda para você:
+- Melhor leitura: os rótulos agora aparecem completos, sem partes cortadas.
+- Sem alteração no comportamento: as caixas de entrada/listas de diretório mantêm o mesmo comportamento e continuam compartilhando uma largura coerente entre os métodos (ZIP, 7Z, TAR, WIM e Extração). A lógica que iguala a largura entre as caixas foi preservada.
+
+Como verificar:
+- Atualize e abra o programa.
+- Abra a seção de métodos de compressão (ZIP, 7Z, TAR, WIM e Extração).
+- Confirme que os rótulos e botões da coluna esquerda aparecem completos, inclusive ao usar rótulos mais longos ou trocar o idioma.
+
+
+__________________________________________________________
+
+
 NOTAS DE LANÇAMENTO: Versão: 0.0.3.0
 18 de Novembro de 2025
 

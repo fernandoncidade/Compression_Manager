@@ -1,6 +1,6 @@
 Política de Privacidade do COMPRESSION MANAGER
-Última atualização: 18 de Novembro de 2025
-Versão: 0.0.3.0
+Última atualização: 09 de Dezembro de 2025
+Versão: 0.0.4.0
 
 Esta Política descreve como o COMPRESSION MANAGER (“Software”) lida com informações do usuário. O Software foi projetado para operar localmente, sem coleta de telemetria.
 

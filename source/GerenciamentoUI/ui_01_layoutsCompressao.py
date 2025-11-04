@@ -70,16 +70,17 @@ class LayoutsCompressao:
 
         try:
             left_right_margins = layout_1.contentsMargins().left() + layout_1.contentsMargins().right()
-            spacing_padding = 20
+            spacing_padding = 28
 
             hbox_widths = []
             for lbl, btn, hbox in ((output_label, output_button, output_hbox),
                                    (store_label, store_button, store_hbox),
                                    (clear_label, clear_button, clear_hbox)):
-                label_w = lbl.fontMetrics().horizontalAdvance(lbl.text())
+                label_w = lbl.sizeHint().width()
                 button_w = btn.sizeHint().width()
                 hbox_margins = hbox.contentsMargins().left() + hbox.contentsMargins().right()
-                hbox_widths.append(label_w + button_w + left_right_margins + hbox_margins + spacing_padding)
+                hbox_spacing = hbox.spacing() if hasattr(hbox, "spacing") else 0
+                hbox_widths.append(label_w + button_w + left_right_margins + hbox_margins + hbox_spacing + spacing_padding)
 
             required_width = max(hbox_widths)
 

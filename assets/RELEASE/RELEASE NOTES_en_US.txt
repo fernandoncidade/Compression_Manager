@@ -1,3 +1,22 @@
+RELEASE NOTES: Version: 0.0.4.0
+December 9, 2025
+
+What was done:
+- Visual fix: adjusted the calculation of the width of the column that contains the output labels and buttons, preventing part of the label text ("Specify Output", "Store ..." and "Clear Output") from being cut off.
+
+What this means for you:
+- Better readability: the labels now appear complete, without parts being cut off.
+- No change in behavior: the input boxes/directory lists keep the same behavior and continue sharing a consistent width across methods (ZIP, 7Z, TAR, WIM and Extraction). The logic that equalizes the width between the boxes was preserved.
+
+How to verify:
+- Update and open the program.
+- Open the compression methods section (ZIP, 7Z, TAR, WIM and Extraction).
+- Confirm that the labels and buttons in the left column appear complete, including when using longer labels or switching the language.
+
+
+__________________________________________________________
+
+
 RELEASE NOTES: Version: 0.0.3.0
 November 18, 2025
 

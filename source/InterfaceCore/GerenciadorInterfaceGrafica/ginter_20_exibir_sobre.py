@@ -67,7 +67,7 @@ def exibir_sobre(app):
 
         cabecalho_fixo = (
             "<h3>COMPRESSION MANAGER</h3>"
-            f"<p><b>{get_text('Versão')}:</b> 0.0.3.0</p>"
+            f"<p><b>{get_text('Versão')}:</b> 0.0.4.0</p>"
             f"<p><b>{get_text('Autores')}:</b> Fernando Nillsson Cidade</p>"
             f"<p><b>{get_text('Descrição')}:</b> {texto_descricao}</p>"
         )
