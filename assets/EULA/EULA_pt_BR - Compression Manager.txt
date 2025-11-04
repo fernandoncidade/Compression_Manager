@@ -1,0 +1,62 @@
+LICENÇA DE USO DE USUÁRIO FINAL - COMPRESSION MANAGER
+Versão 0.0.1.0, 7 de Outubro de 2025
+
+Copyright (c) 2025 Fernando Nillsson Cidade. Todos os direitos reservados.
+
+Ao instalar, copiar ou utilizar o Software distribuído como executável, você concorda em estar vinculado pelos termos desta Licença. Se você não concordar com os termos desta Licença, não instale nem use o Software.
+
+1. DEFINIÇÕES
+   "Licenciador": Fernando Nillsson Cidade, titular dos direitos autorais do Software.
+   "Software": COMPRESSION MANAGER — utilitário gráfico para empacotamento, extração e verificação de integridade de arquivos e pastas, incluindo o executável instalado, seus recursos embarcados e a documentação associada.
+   "Licenciado" ou "Você": a pessoa física ou jurídica que instala ou utiliza o Software.
+
+2. AMBIENTE DE DISTRIBUIÇÃO
+   O Software é distribuído como instalador/executável para Windows. O usuário final não precisa instalar Python nem bibliotecas adicionais para executar o Software; dependências estão empacotadas no executável conforme listado em requirements.txt.
+
+3. CONCESSÃO DE LICENÇA
+   Sujeito aos termos desta Licença, o Licenciador concede ao Licenciado uma licença limitada, não exclusiva, intransferível e revogável para usar o Software conforme a modalidade adquirida (gratuita ou comercial).
+
+4. RESTRIÇÕES DE USO
+   O Licenciado não poderá:
+   a) Reproduzir, distribuir, sublicenciar, alugar, arrendar, emprestar, vender ou transferir o executável, exceto quando autorizado por contrato comercial separado;
+   b) Realizar engenharia reversa, descompilar, desmontar ou tentar extrair código-fonte do executável, exceto quando expressamente permitido por lei aplicável;
+   c) Remover ou alterar avisos de propriedade intelectual ou marca presentes no Software;
+   d) Usar o Software para fins ilegais ou em desconformidade com regulamentações aplicáveis.
+
+5. FUNCIONALIDADES E DADOS
+   - O Software armazena configurações e dados de operação localmente (por exemplo, config.json, language.json, tasks/filestates, exportações) no caminho persistente do usuário (por exemplo, AppData). Não há transmissão automática de dados a servidores externos pelo executável padrão.
+   - O Software oferece exportação (por exemplo, .zip, .7z, .tar, .wim, relatórios em PDF/XLSX) e importação conforme as funcionalidades presentes na build. Arquivos exportados são salvos no local escolhido pelo usuário.
+   - Operações de compressão/extração dependem do binário 7‑Zip (7zG.exe) presente no sistema ou incluído na pasta "7-Zip" do aplicativo; se ausente, tais operações não funcionarão e o usuário será avisado.
+
+6. TERCEIROS
+   - O Software incorpora componentes de terceiros (por exemplo, PySide6, shiboken6, PyInstaller, pywin32 e demais dependências listadas em requirements.txt) sujeitos a licenças próprias. Os textos de licença e a lista de componentes de terceiros acompanham o instalador (veja NOTICE_pt_BR.txt e LICENSES no pacote de distribuição).
+   - O uso desses componentes está sujeito às respectivas licenças; cabe ao redistribuidor binário incluir as informações de licença necessárias (por exemplo, requisitos do 7‑Zip).
+
+7. ATUALIZAÇÕES E SUPORTE
+   O Licenciador pode, a seu exclusivo critério, fornecer atualizações ou correções. Suporte técnico e termos de atualização dependem da modalidade de licença adquirida (consulte o Contrato Comercial quando aplicável).
+
+8. GARANTIA LIMITADA E RESPONSABILIDADE
+   - O Software é fornecido "NO ESTADO EM QUE SE ENCONTRA", sem garantias expressas ou implícitas, salvo as garantias legais aplicáveis.
+   - Na medida permitida por lei, o Licenciador não será responsável por quaisquer danos indiretos, especiais, incidentais, consequenciais ou lucros cessantes decorrentes do uso ou impossibilidade de uso do Software.
+   - Quando houver responsabilidade direta admitida por lei, a indenização estará limitada ao valor pago pelo Software (quando aplicável) ou a R$ 5,00, o que for maior.
+
+9. PRIVACIDADE E PROTEÇÃO DE DADOS
+   - Dados gerados pelo uso do Software (por exemplo, configurações, logs opcionais, exportações) permanecem sob controle do usuário e são armazenados localmente.
+   - O Licenciador declara que o executável padrão não coleta telemetria automática. Tratamento de quaisquer dados pessoais seguirá a Política de Privacidade incluída no pacote (assets/PRIVACY_POLICY/Privacy_Policy_pt_BR.txt).
+
+10. RESCISÃO
+    Esta Licença poderá ser rescindida por violação de suas cláusulas. Após rescisão o Licenciado deve cessar o uso e remover o executável conforme aplicável.
+
+11. LEI APLICÁVEL E FORO
+    Esta Licença será regida pelas leis brasileiras. Para dirimir litígios, fica eleito o foro da Comarca de São José dos Pinhais, Estado do Paraná, Brasil.
+
+12. DECLARAÇÃO DE ACESSIBILIDADE
+    Documentação e arquivos relacionados à acessibilidade (quando incluídos na distribuição) são fornecidos junto ao instalador; sua presença não altera as limitações de responsabilidade desta Licença.
+
+13. ACORDO INTEGRAL
+    Esta Licença, juntamente com a Política de Privacidade e documentos de licença de terceiros incluídos no instalador, constitui o acordo completo entre as partes com relação ao Software.
+
+Contato para informações e suporte: canais e endereços fornecidos no instalador/distribuição.
+Autor / Contato: Fernando Nillsson Cidade — E-mail: linceu_lighthouse@outlook.com
+
+Data: 7 de Outubro de 2025

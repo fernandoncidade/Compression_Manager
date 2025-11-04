@@ -1,0 +1,89 @@
+COMMERCIAL LICENSE AGREEMENT - COMPRESSION MANAGER
+
+This Commercial License Agreement ("Agreement") is entered into between:
+
+LICENSOR: Fernando Nillsson Cidade, hereinafter referred to as "LICENSOR".
+and
+LICENSEE: The natural person or legal entity who acquires the commercial license for the COMPRESSION MANAGER software, hereinafter referred to as "LICENSEE".
+
+This Agreement supplements the terms of the End User License Agreement (EULA) for COMPRESSION MANAGER and sets forth the specific terms for commercial use of the software.
+
+1. OBJECT OF THE AGREEMENT
+1.1 The purpose of this Agreement is the grant, by the LICENSOR to the LICENSEE, of a license to use the software named "COMPRESSION MANAGER" ("Software"), according to the licensing modality acquired.
+1.2 The Software is a lightweight graphical utility for Windows designed for packaging, extracting and integrity verification of files and folders, supporting multiple formats (ZIP, 7Z, TAR, WIM and others recognized by 7‑Zip). It provides selection of output directories per format, configurable compression methods, a process queue and drag-and-drop operation. Commercial installation will be provided via installer/executable; the end LICENSEE does not need to install development dependencies.
+
+2. LICENSING MODALITIES
+2.1 Individual License
+   a) Permits installation of the Software on up to 2 (two) devices owned by the same LICENSEE (e.g., desktop and laptop).
+   b) Includes updates and fixes for 1 (one) year from the date of purchase.
+   c) Includes basic email technical support for 1 (one) year.
+2.2 Business License (Small Business)
+   a) Permits installation of the Software on up to 10 (ten) workstations within the same organization.
+   b) Includes updates for 1 (one) year from the date of purchase.
+   c) Includes priority technical support by email and phone for 1 (one) year.
+   d) Allows basic interface customization (texts and icons) according to customer needs, when technically feasible.
+2.3 Corporate License (Enterprise)
+   a) Permits installation of the Software on an unlimited number of workstations within the same organization, subject to commercial agreement.
+   b) Includes updates for 2 (two) years from the date of purchase.
+   c) Includes premium technical support (SLA) by email, phone and, if necessary, remote session.
+   d) Includes options for advanced customization, integration and training as agreed in a commercial addendum.
+
+3. PAYMENT
+3.1 The LICENSEE will pay the LICENSOR the amount corresponding to the chosen licensing modality, according to the proposal or the applicable price list.
+3.2 Payments may be made by bank slip, credit card, bank transfer or PIX, unless otherwise agreed in writing.
+3.3 In case of late payment, interest of 1% per month will apply, plus a penalty of 2% on the amount due, in addition to any collection costs.
+
+4. TERM AND RENEWAL
+4.1 This Agreement shall remain in force for the term specified in the acquired licensing modality, counted from the payment date.
+4.2 Renewal of updates and support may be carried out upon payment of the prevailing fee at the time; continued use of the software by the LICENSEE is not conditioned on renewal (unless expressly provided otherwise in the acquired modality).
+
+5. SUPPORT AND UPDATES
+5.1 The LICENSOR shall provide support and updates according to the contracted modality, limited in all cases to the version distributed as an executable.
+5.2 Support covers installation of the executable, guidance on the operation of documented features, and correction of defects that prevent expected use of the Software.
+
+6. LIMITATIONS AND LIABILITY
+6.1 The LICENSOR shall not be liable for indirect losses, lost profits, consequential damages or any damages resulting from the use or inability to use the Software.
+6.2 The LICENSEE is responsible for backups of its data (for example, exported files and configuration files such as config.json) and for compliance with internal IT policies when installing the Software.
+6.3 The Software is provided "as is", except as required by law; the LICENSOR undertakes to make reasonable efforts to correct reported defects.
+
+7. CONFIDENTIALITY AND DATA PROTECTION
+7.1 The parties agree to keep confidential any confidential information exchanged under this Agreement for a period of 5 (five) years after termination.
+7.2 The LICENSOR will process any personal data of the LICENSEE in accordance with the Brazilian General Data Protection Law (Law No. 13.709/2018). Data generated or used by the Software are, by default, stored locally; there is no automatic transmission to external servers by the standard executable (see the Privacy Policy included in the installer).
+
+8. TERMINATION
+8.1 This Agreement may be terminated for breach of any contractual clause, by mutual agreement, or in the cases provided for in the EULA.
+8.2 In case of termination due to contractual breach by the LICENSEE, no refund of amounts paid will be made, except by agreement otherwise.
+
+9. TRANSFER AND RESTRICTIONS
+9.1 The LICENSEE may not sublicense, redistribute or resell the executable without the LICENSOR's express authorization, except as provided for in this Agreement.
+9.2 Installation is permitted on the stations provided for in the acquired modality; violations by installing beyond the permitted number constitute contractual breach.
+
+10. LAW AND JURISDICTION
+10.1 This Agreement shall be governed by Brazilian law.
+10.2 To resolve any disputes arising from this commercial Agreement, the parties elect the courts of the District of São José dos Pinhais, State of Paraná, Brazil, waiving any other forum.
+
+11. ACCESSIBILITY AND STORE REQUIREMENTS COMPLIANCE (Microsoft Store / ADA)
+11.1 The LICENSOR declares that, for distribution in digital stores (e.g., Microsoft Store), an Accessibility and Compliance Statement has been prepared and accompanies the installer/distribution (document internally referenced as "MS-Store-ADA-v8.9-FINAL-EN.pdf" when applicable). Such document describes the practices adopted by the LICENSOR regarding accessibility requirements compatible with platform policies.
+11.2 Inclusion of the application in stores or adherence to third-party accessibility requirements does not alter the responsibilities and limitations of this Agreement, except when specific distributor rules require additional written terms.
+11.3 The LICENSEE agrees to report to the LICENSOR any accessibility barriers or non-conformities identified in the use of the Software so they can be evaluated and, when feasible, corrected in subsequent updates. Accessibility reports may be sent to the support channels indicated in the installer.
+11.4 The LICENSOR will make reasonable efforts to maintain the declared compliance, but does not guarantee absolute compatibility with all accessibility standards on all platforms and operating system versions.
+
+12. THIRD-PARTY COMPONENTS AND LICENSES
+12.1 The Software includes third-party components subject to licenses included in the license files provided with the installer (see NOTICE_pt_BR.txt and LICENSES directory in the distribution package). Project dependencies are listed in requirements.txt.
+12.2 The LICENSOR provides the list of websites and license texts for consultation (as per documentation attached to the installer).
+
+FINAL PROVISIONS
+- The LICENSOR provides the installer/executable and necessary resources; the LICENSEE acknowledges that distribution is provided in compiled form and that use does not require installation of development libraries.
+- Acquisition of additional services (customization, integration, training) must be the subject of a contractual addendum.
+- It is stated that, when applicable, the Accessibility Statement and documentation related to Microsoft Store requirements compliance are included in the installation package and available for consultation by the LICENSEE.
+
+IN WITNESS WHEREOF, the parties execute this Agreement.
+
+Brazil, Paraná, São José dos Pinhais, October 7, 2025
+
+Fernando Nillsson Cidade
+______________________________
+LICENSOR
+
+______________________________
+LICENSEE

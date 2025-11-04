@@ -1,0 +1,89 @@
+CONTRATO DE LICENCIAMENTO COMERCIAL - COMPRESSION MANAGER
+
+Este Contrato de Licenciamento Comercial ("Contrato") é celebrado entre:
+
+LICENCIADOR: Fernando Nillsson Cidade, doravante designado apenas como "LICENCIADOR".
+e
+LICENCIADO: A pessoa física ou jurídica que adquire a licença comercial do software COMPRESSION MANAGER, doravante designada apenas como "LICENCIADO".
+
+Este Contrato complementa os termos da Licença de Uso de Usuário Final (EULA) do COMPRESSION MANAGER e estabelece os termos específicos para uso comercial do software.
+
+1. OBJETO DO CONTRATO
+1.1 O presente Contrato tem por objeto a concessão, pelo LICENCIADOR ao LICENCIADO, de licença de uso do software denominado "COMPRESSION MANAGER" ("Software"), conforme modalidade de licenciamento adquirida.
+1.2 O Software é um utilitário gráfico leve para Windows projetado para empacotamento, extração e verificação de integridade de arquivos e pastas, com suporte a múltiplos formatos (ZIP, 7Z, TAR, WIM e outros reconhecidos pelo 7‑Zip). Fornece seleção de diretórios de saída por formato, métodos de compressão configuráveis, fila de processos e operação via arrastar-e-soltar. A instalação comercial ocorrerá por meio de instalador/executável; o LICENCIADO final não precisa instalar dependências de desenvolvimento.
+
+2. MODALIDADES DE LICENCIAMENTO
+2.1 Licença Individual
+   a) Permite a instalação do Software em até 2 (dois) dispositivos pertencentes ao mesmo LICENCIADO (ex.: computador pessoal e laptop).
+   b) Inclui atualizações e correções por 1 (um) ano a partir da data de aquisição.
+   c) Inclui suporte técnico básico por e-mail por 1 (um) ano.
+2.2 Licença Empresarial (Small Business)
+   a) Permite a instalação do Software em até 10 (dez) estações de trabalho dentro da mesma organização.
+   b) Inclui atualizações por 1 (um) ano a partir da data de aquisição.
+   c) Inclui suporte técnico prioritário por e-mail e telefone por 1 (um) ano.
+   d) Permite personalização básica da interface (textos e ícones) conforme necessidades do cliente, quando tecnicamente viável.
+2.3 Licença Corporativa (Enterprise)
+   a) Permite a instalação do Software em número ilimitado de estações de trabalho dentro da mesma organização, mediante acordo comercial.
+   b) Inclui atualizações por 2 (dois) anos a partir da data de aquisição.
+   c) Inclui suporte técnico premium (SLA) por e-mail, telefone e, se necessário, sessão remota.
+   d) Inclui opções de personalização avançada, integração e treinamento conforme escopo acordado em anexo comercial.
+
+3. PAGAMENTO
+3.1 O LICENCIADO pagará ao LICENCIADOR o valor correspondente à modalidade de licenciamento escolhida, conforme proposta ou tabela de preços vigente.
+3.2 Os pagamentos poderão ser efetuados através de boleto bancário, cartão de crédito, transferência bancária ou PIX, salvo condição diversa acordada por escrito.
+3.3 Em caso de atraso no pagamento, incidirão juros de mora de 1% ao mês, acrescidos de multa de 2% sobre o valor devido, além de eventuais custos de cobrança.
+
+4. PRAZO E RENOVAÇÃO
+4.1 Este Contrato vigorará pelo prazo especificado na modalidade de licenciamento adquirida, contado a partir da data de pagamento.
+4.2 A renovação de atualizações e suporte poderá ser realizada mediante pagamento do valor vigente à época; a continuidade do uso do software pelo LICENCIADO não é condicionada à renovação (salvo cláusula contrária expressa na modalidade adquirida).
+
+5. SUPORTE E ATUALIZAÇÕES
+5.1 O LICENCIADOR prestará suporte e atualizações conforme a modalidade contratada, limitando-se, em todos os casos, à versão distribuída como executável.
+5.2 O suporte abrange instalação do executável, orientação sobre funcionamento das funcionalidades documentadas, e correção de defeitos que impeçam o uso esperado do Software.
+
+6. LIMITAÇÕES E RESPONSABILIDADES
+6.1 O LICENCIADOR não será responsável por perdas indiretas, lucros cessantes, danos consequenciais ou quaisquer danos resultantes do uso ou incapacidade de uso do Software.
+6.2 O LICENCIADO é responsável por backups dos seus dados (por exemplo, de arquivos exportados e de arquivos de configuração como config.json) e pela conformidade com políticas internas de TI ao instalar o Software.
+6.3 O Software é fornecido "no estado em que se encontra", salvo garantia legal em contrário; o LICENCIADOR compromete-se a envidar esforços razoáveis para correção de falhas comunicadas.
+
+7. CONFIDENCIALIDADE E PROTEÇÃO DE DADOS
+7.1 As partes comprometem-se a manter sigilo sobre informações confidenciais trocadas em razão deste Contrato pelo prazo de 5 (cinco) anos após o término contratual.
+7.2 O LICENCIADOR tratará eventuais dados pessoais do LICENCIADO em conformidade com a Lei Geral de Proteção de Dados (Lei 13.709/2018). Dados gerados ou utilizados pelo Software são, por padrão, armazenados localmente; não há transmissão automática a servidores externos pelo executável padrão (ver Política de Privacidade incluída no instalador).
+
+8. RESCISÃO
+8.1 Este Contrato poderá ser rescindido por violação de qualquer cláusula contratual, por mútuo acordo ou nas hipóteses previstas no EULA.
+8.2 Em caso de rescisão por violação contratual pelo LICENCIADO, não haverá devolução de valores pagos, salvo acordo em contrário.
+
+9. TRANSFERÊNCIA E RESTRIÇÕES
+9.1 O LICENCIADO não poderá sublicenciar, redistribuir ou revender o executável sem autorização expressa do LICENCIADOR, exceto nas modalidades previstas neste Contrato.
+9.2 É permitida a instalação nas estações previstas na modalidade adquirida; violações por instalação além do permitido constituem infração contratual.
+
+10. LEGISLAÇÃO E FORO
+10.1 Este Contrato será regido pelas leis brasileiras.
+10.2 Para dirimir quaisquer dúvidas ou litígios oriundos deste Contrato comercial, as partes elegem o foro da Comarca de São José dos Pinhais, Estado do Paraná, Brasil, com renúncia a qualquer outro.
+
+11. ACESSIBILIDADE E CONFORMIDADE COM REQUISITOS DE LOJA (Microsoft Store / ADA)
+11.1 O LICENCIADOR declara que, para fins de distribuição em lojas digitais (ex.: Microsoft Store), foi preparada uma Declaração de Acessibilidade e Conformidade que acompanha o instalador/distribuição (documento referenciado internamente como "MS-Store-ADA-v8.9-FINAL-EN.pdf" quando aplicável). Tal documento descreve as práticas adotadas pelo LICENCIADOR quanto a requisitos de acessibilidade compatíveis com políticas de plataforma.
+11.2 A inclusão do aplicativo em lojas ou a adesão a requisitos de acessibilidade de terceiros não altera as responsabilidades e limitações deste Contrato, exceto quando regras específicas de distribuidor exigirem termos adicionais por escrito.
+11.3 O LICENCIADO compromete-se a comunicar ao LICENCIADOR quaisquer barreiras de acessibilidade ou não conformidades identificadas no uso do Software para que sejam avaliadas e, quando viável, corrigidas em atualizações subsequentes. Relatos de acessibilidade podem ser enviados aos canais de suporte indicados no instalador.
+11.4 O LICENCIADOR envidará esforços razoáveis para manter a conformidade declarada, mas não garante compatibilidade absoluta com todos os padrões de acessibilidade em todas as plataformas e versões de sistema operacional.
+
+12. COMPONENTES DE TERCEIROS E LICENÇAS
+12.1 O Software inclui componentes de terceiros sujeitos a licenças que constam nos arquivos de licença fornecidos com o instalador (veja NOTICE_pt_BR.txt e diretório LICENSES no pacote de distribuição). Dependências do projeto estão listadas em requirements.txt.
+12.2 O LICENCIADOR disponibiliza a lista de sites e textos de licença para consulta (conforme documentação anexa ao instalador).
+
+DISPOSIÇÕES FINAIS
+- O LICENCIADOR fornece o instalador/executável e os recursos necessários; o LICENCIADO reconhece que a distribuição se dá em formato compilado e que o uso não exige instalação de bibliotecas de desenvolvimento.
+- A aquisição de serviços adicionais (personalização, integração, treinamento) deverá ser objeto de aditivo contratual.
+- Declara-se que, quando aplicável, a Declaração de Acessibilidade e documentação relativas à conformidade com requisitos da Microsoft Store estão incluídas no pacote de instalação e disponíveis para consulta pelo LICENCIADO.
+
+E por estarem justas e contratadas, as partes celebram o presente Contrato.
+
+Brasil, Paraná, São José dos Pinhais, 7 de Outubro de 2025
+
+Fernando Nillsson Cidade
+______________________________
+LICENCIADOR
+
+______________________________
+LICENCIADO

@@ -1,0 +1,70 @@
+Política de Privacidade do COMPRESSION MANAGER
+Última atualização: 7 de Outubro de 2025
+Versão: 0.0.1.0
+
+Esta Política descreve como o COMPRESSION MANAGER (“Software”) lida com informações do usuário. O Software foi projetado para operar localmente, sem coleta de telemetria.
+
+1. Escopo e Princípios
+- Operação local: todos os dados tratados pelo Software permanecem no seu dispositivo.
+- Minimização: apenas informações necessárias para executar compressão, extração e manutenção de preferências são processadas.
+- Transparência e controle: você controla abertura, compressão, extração, exportação, importação e exclusão de arquivos gerados.
+
+2. Dados Processados pelo Software
+2.1 Conteúdo manipulado por você
+- Arquivos e pastas que você adiciona para compressão ou extração (nomes de arquivos, metadados básicos necessários para operações de arquivo).
+- Configurações de preferências (por exemplo, formatos alvo, níveis de compressão, diretórios de saída).
+
+2.2 Arquivos escolhidos por você
+- Importação/Abrir: quando você escolhe um arquivo (por exemplo, .zip, .7z, .tar, .wim, .pdf, .xlsx) para extrair ou para ler informações, o Software acessa somente esse(s) arquivo(s).
+- Exportação/Salvar: ao criar um arquivo compactado (.zip, .7z, .tar, .wim) ou gerar relatórios, o Software grava esses arquivos no local que você selecionar.
+
+2.3 Dados técnicos locais
+- Arquivos de configuração e preferências locais (por exemplo, config.json, language.json) e, se gerados, registros de execução ou de erro locais podem ser mantidos para funcionamento e diagnóstico.
+- Não há coleta automática de identificadores pessoais ou envio de dados a servidores externos pelo Software.
+
+3. O que o Software NÃO Coleta ou Transmite
+- Sem conta, cadastro ou login exigidos pelo Software.
+- Sem telemetria, analytics ou rastreamento online embutido.
+- Sem envio automático de dados a servidores do desenvolvedor ou a terceiros.
+- Sem varredura de pastas além dos arquivos que você explicitamente escolher abrir/importar.
+
+4. Armazenamento e Retenção
+- Local de armazenamento: configurações e preferências são salvas em arquivos JSON no caminho persistente do usuário (por exemplo, AppData). O caminho exato é determinado pelo sistema operacional.
+- Exportações: arquivos compactados e relatórios gerados são gravados no local escolhido por você no momento do salvamento.
+- Logs & registros: quaisquer registros de erro são gravados localmente, quando habilitados, e podem ser removidos manualmente.
+- Retenção: os dados permanecem até você editar, limpar ou excluir; você pode apagar manualmente arquivos de configuração, logs e exportações a qualquer momento.
+
+5. Base Legal (LGPD)
+- O tratamento local de dados é realizado para execução das funcionalidades do Software a pedido do usuário. Como os dados não são enviados ao desenvolvedor, você mantém controle direto sobre eles.
+
+6. Compartilhamento
+- O Software não compartilha dados automaticamente. Qualquer compartilhamento ocorre somente por sua ação (ex.: enviar um arquivo compactado ou relatório a terceiros).
+
+7. Segurança
+- Como os dados ficam apenas no seu dispositivo, a proteção depende das salvaguardas do próprio sistema (contas de usuário, permissões, antivírus, backups). Recomenda-se manter o sistema atualizado e fazer cópias de segurança periódicas.
+
+8. Integração com 7‑Zip e Executáveis de Terceiros
+- O Software integra-se ao executável 7‑Zip (7zG.exe) para operações de compressão/extração. O aplicativo procura por um executável 7‑Zip incluído na pasta "7-Zip" do aplicativo ou nos caminhos padrão do sistema (Program Files). Se o 7‑Zip não for encontrado, operações de compressão/extração não funcionarão e o usuário será avisado.
+- O uso do 7‑Zip é local; a busca e execução do binário ocorrem no seu sistema conforme permissões locais.
+
+9. Relatórios de Erro e Diagnóstico
+- O Software não envia relatórios de erro ao desenvolvedor. Eventuais registros de erro podem ser gravados localmente para inspeção.
+- Caso o sistema operacional gere relatórios de falha (ex.: Windows Error Reporting), isso ocorre segundo as configurações do seu sistema e sob a política de privacidade do respectivo fornecedor.
+
+10. Direitos do Titular (LGPD)
+- Acesso, correção e exclusão: você pode ver, editar e excluir arquivos de configuração e exportações diretamente no seu sistema de arquivos. Para remoção completa, apague manualmente os arquivos gerados pelo Software (config.json, language.json, logs, exportações).
+- Portabilidade: utilize as funções de exportação para obter cópias dos arquivos processados.
+
+11. Crianças e Adolescentes
+- O Software não é direcionado a crianças menores de 13 anos e não realiza coleta intencional de dados pessoais.
+
+12. Terceiros e Bibliotecas
+- O Software utiliza bibliotecas e ferramentas de terceiros (por exemplo, PySide6, openpyxl, PyPDF2, reportlab, 7‑Zip) apenas para fornecer funcionalidades locais (interface, leitura/gravação de arquivos, geração de relatórios). Essas bibliotecas não realizam envio automático de dados em nome do Software. Licenças e avisos estão disponíveis na seção “Notices/Licenses” do instalador.
+
+13. Alterações nesta Política
+- Esta Política pode ser atualizada. Em caso de mudanças relevantes, a data no topo será atualizada e, quando apropriado, poderá haver aviso dentro do Software.
+
+14. Contato
+- Dúvidas sobre esta Política:
+  Fernando Nillsson Cidade
+  E-mail: linceu_lighthouse@outlook.com

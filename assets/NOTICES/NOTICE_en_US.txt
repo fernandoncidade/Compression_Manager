@@ -1,0 +1,65 @@
+Notice of Licenses and Third-Party Software Attributions
+
+This document lists the main third-party libraries and components used in the COMPRESSION MANAGER project and provides references to their licenses. The purpose is to meet distribution requirements (including LGPL compliance for Qt/PySide6 libraries) and to provide information for users and integrators. Project dependencies are listed in the requirements.txt file included in the repository/installer.
+
+General information about PySide6 (Qt for Python) — LGPL compliance
+- Library: PySide6 (Qt for Python)
+- License: GNU Lesser General Public License (LGPL) v3 (or as per the packaged PySide6 version)
+- Version used (see requirements.txt): PySide6 6.x (as packaged in the installer)
+- Replacing LGPL libraries:
+  - PySide6 and Shiboken6 are normally distributed as dynamic libraries (DLLs) in the installer/executable.
+  - To replace the PySide6/Shiboken6 DLLs, locate the installation/instance folder containing the binaries and replace the corresponding files with compatible versions.
+  - PySide source code: https://github.com/qt/pyside
+
+Main dependencies (references and licenses)
+- PySide6 / Shiboken6 — LGPL v3
+  https://github.com/qt/pyside
+  https://www.gnu.org/licenses/lgpl-3.0.html.en
+
+- PyInstaller / pyinstaller-hooks-contrib — consult the licenses of PyInstaller used in the build
+  https://www.pyinstaller.org/
+  https://github.com/pyinstaller/pyinstaller
+
+- pywin32 / pywin32-ctypes — Windows APIs (licensing per upstream projects)
+  https://github.com/mhammond/pywin32
+
+- platformdirs, tomli, importlib_metadata, importlib_resources, zipp, more-itertools, packaging, setuptools, future, altgraph, pefile, pip-chill, jaraco.* — MIT/Apache-compatible (see repositories)
+  See: https://pypi.org and requirements.txt for specific versions.
+
+- backports.tarfile — MIT
+- jaraco.collections / jaraco.context / jaraco.functools / jaraco.text — MIT
+- autocommand, altgraph, etc. — see requirements.txt for full list
+
+7‑Zip (external binary)
+- The application integrates and executes the 7‑Zip binary (7zG.exe) locally on the user's system.
+- 7‑Zip licensing:
+  - 7z.dll: LGPL (most of the code), with portions under BSD 3-clause and "unRAR" restriction where applicable.
+  - Other files: generally LGPL.
+  - Information and licenses: https://www.7-zip.org/ and license notes included in the 7‑Zip package.
+- Note: binary redistributions must include license information as required by the 7‑Zip project.
+
+Obtaining full license texts
+- Complete license texts and the list of third-party components are included in the distribution/installer package (LICENSE.txt file / LICENSES directory or equivalent).
+- Useful links:
+  - LGPL: https://www.gnu.org/licenses/lgpl-3.0.html.en
+  - MIT: https://opensource.org/licenses/MIT
+  - BSD: https://opensource.org/licenses
+  - Apache 2.0: https://www.apache.org/licenses/LICENSE-2.0
+  - Python Software Foundation License: https://docs.python.org/3/license.html
+
+Statement on data transmission and privacy
+- The standard executable does not send telemetry automatically to external servers.
+- User data (for example, processed files, exports, config.json, language.json) remains under the user's control and is stored locally.
+- For details on personal data handling, consult the Privacy Policy included in the installer/distribution.
+
+Contact for source code requests or license clarifications
+- If you need source code copies required by licenses (e.g., LGPL) or clarifications about replacing libraries, use the support channels provided in the installer/distribution.
+- Author / Contact:
+  Fernando Nillsson Cidade
+  E-mail: linceu_lighthouse@outlook.com
+
+Final notes
+- This document has been adjusted to reflect the dependencies and structure of the COMPRESSION MANAGER project (see README.md, ABOUT and requirements.txt).
+- Keep backups of your data before updating or replacing libraries in the executable.
+
+Document version: October 7, 2025

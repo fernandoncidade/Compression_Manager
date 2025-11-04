@@ -1,0 +1,65 @@
+Aviso de Licenças e Atribuições de Software de Terceiros
+
+Este documento lista as principais bibliotecas e componentes de terceiros utilizados no projeto COMPRESSION MANAGER e fornece referências às suas licenças. O objetivo é cumprir requisitos de distribuição (incluindo conformidade LGPL para bibliotecas Qt/PySide6) e oferecer informações para usuários e integradores. As dependências do projeto estão listadas no arquivo requirements.txt incluído no repositório/instalador.
+
+Informações gerais sobre PySide6 (Qt para Python) — conformidade LGPL
+- Biblioteca: PySide6 (Qt for Python)
+- Licença: GNU Lesser General Public License (LGPL) v3 (ou conforme versão do PySide6 empacotada)
+- Versão utilizada (ver requirements.txt): PySide6 6.x (conforme pacote no instalador)
+- Substituição das bibliotecas LGPL:
+  - As bibliotecas PySide6 e Shiboken6 são normalmente distribuídas como bibliotecas dinâmicas (DLLs) no instalador/executável.
+  - Para substituir as DLLs PySide6/Shiboken6, localize a pasta de instalação/instância que contém os binários e substitua os arquivos correspondentes por versões compatíveis.
+  - Código-fonte do PySide: https://github.com/qt/pyside
+
+Dependências principais (referências e licenças)
+- PySide6 / Shiboken6 — LGPL v3
+  https://github.com/qt/pyside
+  https://www.gnu.org/licenses/lgpl-3.0.html.en
+
+- PyInstaller / pyinstaller-hooks-contrib — consulte as licenças do PyInstaller usadas no build
+  https://www.pyinstaller.org/
+  https://github.com/pyinstaller/pyinstaller
+
+- pywin32 / pywin32-ctypes — APIs Windows (licenciamento conforme projetos)
+  https://github.com/mhammond/pywin32
+
+- platformdirs, tomli, importlib_metadata, importlib_resources, zipp, more-itertools, packaging, setuptools, future, altgraph, pefile, pip-chill, jaraco.* — MIT/Apache/compatíveis (ver repositórios)
+  Consulte: https://pypi.org e requirements.txt para versões específicas.
+
+- backports.tarfile — MIT
+- jaraco.collections / jaraco.context / jaraco.functools / jaraco.text — MIT
+- autocommand, altgraph, etc. — ver requirements.txt para lista completa
+
+7‑Zip (binário externo)
+- O aplicativo integra e executa o binário 7‑Zip (7zG.exe) local no sistema do usuário.
+- Licenciamento do 7‑Zip:
+  - 7z.dll: LGPL (a maior parte do código), com partes sob BSD 3-clause e restrição "unRAR" onde aplicável.
+  - Outros arquivos: geralmente LGPL.
+  - Informações e licenças: https://www.7-zip.org/ e notas de licença incluídas no pacote do 7‑Zip.
+- Nota: redistribuições em binário devem acompanhar as informações de licença conforme o projeto 7‑Zip.
+
+Obtenção dos textos de licença completos
+- Os textos completos das licenças e a lista de componentes de terceiros são incluídos no pacote de distribuição/instalador (arquivo LICENSE.txt / diretório LICENSES ou equivalente).
+- Links úteis:
+  - LGPL: https://www.gnu.org/licenses/lgpl-3.0.html.en
+  - MIT: https://opensource.org/licenses/MIT
+  - BSD: https://opensource.org/licenses
+  - Apache 2.0: https://www.apache.org/licenses/LICENSE-2.0
+  - Python Software Foundation License: https://docs.python.org/3/license.html
+
+Declaração sobre transmissão de dados e privacidade
+- O executável padrão não envia telemetria automática a servidores externos.
+- Os dados do usuário (por exemplo, arquivos processados, exportações, config.json, language.json) permanecem sob controle do usuário e são armazenados localmente.
+- Para detalhes sobre tratamento de dados pessoais, consulte a Política de Privacidade incluída no instalador/distribuição.
+
+Contato para pedidos de código-fonte ou esclarecimentos sobre licenças
+- Caso precise de cópias de código-fonte exigidas por licenças (por exemplo LGPL) ou de esclarecimentos sobre substituição de bibliotecas, utilize os canais de suporte informados no instalador/distribuição.
+- Autor / Contato:
+  Fernando Nillsson Cidade
+  E-mail: linceu_lighthouse@outlook.com
+
+Notas finais
+- Este documento foi ajustado para refletir as dependências e a estrutura do projeto COMPRESSION MANAGER (ver README.md, ABOUT e requirements.txt).
+- Mantenha backups dos seus dados antes de atualizar ou substituir bibliotecas no executável.
+
+Versão do documento: 7 de Outubro de 2025

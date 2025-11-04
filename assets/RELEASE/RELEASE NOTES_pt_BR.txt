@@ -1,0 +1,18 @@
+NOTAS DE LANÇAMENTO: Versão: 0.0.1.0
+
+Resumo:
+Manager Compression é um utilitário gráfico leve para Windows projetado para empacotamento, extração e verificação de integridade de arquivos e pastas. Oferece suporte a múltiplos formatos (ZIP, 7Z, TAR, WIM e outros reconhecidos pelo 7‑Zip), seleção de vários diretórios de saída, métodos de compressão configuráveis, fila de processos e operação via arrastar-e-soltar. A interface é multilíngue (pt_BR / en_US) e preparada para empacotamento como executável (distribuição sem necessidade de instalação manual de dependências Python).
+
+Funcionalidades principais:
+- Compressão de pastas e arquivos nos formatos .zip, .7z, .tar e .wim.
+- Extração de arquivos compactados em diversos formatos suportados pelo 7‑Zip (.rar, .zip, .7z, .tar, .wim, .bz2, .tar.xz, .tgz, .tar.gz, .zipx, .lzh, .iso etc.).
+- Seleção e manutenção de múltiplos diretórios de saída por formato.
+- Arrastar e soltar (drag & drop) para adicionar arquivos e pastas às listas de entrada e saída.
+- Métodos de compressão configuráveis por formato (níveis 0–9 onde aplicável) e persistência das preferências.
+- Modo "Armazenar como" para criar pacotes com ajustes específicos sem alterar as configurações padrões.
+- Atualização de arquivos existentes (opção de atualizar arquivos compactados em vez de recriá‑los).
+- Teste de integridade de arquivos compactados (comando "t" do 7‑Zip) para validar pacotes.
+- Fila de compressão: novos pedidos podem aguardar enquanto outra tarefa do mesmo formato é executada.
+- Mensagens e diálogos traduzíveis; troca de idioma em tempo de execução.
+- Janela "Sobre" que exibe texto de descrição, histórico, licenças, avisos e política de privacidade carregados a partir dos recursos incluídos.
+- Operação offline: todos os dados são locais (arquivos de configuração e preferências armazenados no diretório persistente do usuário).
