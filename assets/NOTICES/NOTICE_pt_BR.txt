@@ -38,6 +38,17 @@ Dependências principais (referências e licenças)
   - Informações e licenças: https://www.7-zip.org/ e notas de licença incluídas no pacote do 7‑Zip.
 - Nota: redistribuições em binário devem acompanhar as informações de licença conforme o projeto 7‑Zip.
 
+Créditos adicionais de componentes 7‑Zip:
+
+- Igor Pavlov — autor principal do 7‑Zip (LGPL, BSD).
+- Apple Inc. — código de decompressor LZFSE (BSD 3‑clause).
+- Facebook Inc. — código de decompressor ZSTD (BSD 3‑clause).
+- Yann Collet — código XXH64 (BSD 2‑clause).
+- Alexander Roshal — código unRAR (restrição de uso).
+
+Os textos completos das licenças e avisos de copyright
+estão disponíveis em License.txt e no diretório LICENSES.
+
 Obtenção dos textos de licença completos
 - Os textos completos das licenças e a lista de componentes de terceiros são incluídos no pacote de distribuição/instalador (arquivo LICENSE.txt / diretório LICENSES ou equivalente).
 - Links úteis:
@@ -62,4 +73,4 @@ Notas finais
 - Este documento foi ajustado para refletir as dependências e a estrutura do projeto COMPRESSION MANAGER (ver README.md, ABOUT e requirements.txt).
 - Mantenha backups dos seus dados antes de atualizar ou substituir bibliotecas no executável.
 
-Versão do documento: 28 de Outubro de 2025
+Versão do documento: 18 de Novembro de 2025

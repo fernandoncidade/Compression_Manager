@@ -6,3 +6,9 @@ Copyright (C) 2025 Fernando Nillsson Cidade. All rights reserved.
 The COMPRESSION MANAGER software and all associated documentation, including all content of the Software and Dependencies, are the intellectual property of Fernando Nillsson Cidade. Copyright protection covers, but is not limited to, the program's source code, graphical interface, texts, manuals, and project description.
 
 The name "COMPRESSION MANAGER" is a trademark belonging to Fernando Nillsson Cidade. The unauthorized use of the name, logo, or any distinctive material associated with the project is strictly prohibited.
+
+    Notice: This software uses third-party components that are licensed
+    separately, including 7‑Zip (Igor Pavlov), Apple Inc., Facebook Inc.,
+    Yann Collet and Alexander Roshal. These components are distributed under
+    their respective licenses (LGPL, BSD and the unRAR restriction), as
+    stated in the accompanying license files.

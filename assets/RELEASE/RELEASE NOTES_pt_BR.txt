@@ -1,3 +1,22 @@
+NOTAS DE LANÇAMENTO: Versão: 0.0.3.0
+18 de Novembro de 2025
+
+O que foi feito:
+- Ajuste visual: as caixas que mostram os diretórios de saída/extração agora ficam alinhadas pela borda esquerda em todos os métodos (ZIP, 7Z, TAR, WIM e Extração).
+
+O que muda para você:
+- Interface mais limpa e fácil de ler.
+- Nenhuma alteração no funcionamento — apenas melhoria visual.
+
+Como verificar:
+- Atualize e abra o programa.
+- Confira o alinhamento das caixas de saída para cada método.
+- Opcional: testar com rótulos longos ou outro idioma para confirmar.
+
+
+__________________________________________________________
+
+
 NOTAS DE LANÇAMENTO: Versão: 0.0.2.0
 28 de Outubro de 2025
 
@@ -8,9 +27,7 @@ Funcionalidades principais:
 - O propósito do aplicativo permanece o mesmo: um utilitário gráfico leve para Windows projetado para empacotamento, extração e verificação de integridade de arquivos e pastas. Oferece suporte a múltiplos formatos (ZIP, 7Z, TAR, WIM e outros reconhecidos pelo 7‑Zip), seleção de vários diretórios de saída, métodos de compressão configuráveis, fila de processos e operação via arrastar-e-soltar. A interface é multilíngue (pt_BR / en_US) e preparada para empacotamento como executável (distribuição sem necessidade de instalação manual de dependências Python). Não foram adicionados novos recursos, preservando a simplicidade e o foco do aplicativo.
 
 
-
-_____________________________
-
+__________________________________________________________
 
 
 NOTAS DE LANÇAMENTO: Versão: 0.0.1.0

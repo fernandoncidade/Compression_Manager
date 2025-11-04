@@ -1,3 +1,22 @@
+RELEASE NOTES: Version: 0.0.3.0
+November 18, 2025
+
+What was done:
+- Visual adjustment: the boxes that display the output/extraction directories are now left-aligned across all methods (ZIP, 7Z, TAR, WIM, and Extraction).
+
+What this means for you:
+- Cleaner, easier-to-read interface.
+- No functional changes — visual improvement only.
+
+How to verify:
+- Update and open the program.
+- Check the alignment of the output boxes for each method.
+- Optional: test with long labels or another language to confirm.
+
+
+__________________________________________________________
+
+
 RELEASE NOTES: Version: 0.0.2.0
 October 28, 2025
 
@@ -8,9 +27,7 @@ Key features:
 - The purpose of the application remains the same: a lightweight graphical utility for Windows designed for packing, extracting and integrity-checking files and folders. It supports multiple formats (ZIP, 7Z, TAR, WIM and others recognized by 7‑Zip), selection of multiple output directories, configurable compression methods, a process queue and drag-and-drop operation. The interface is multilingual (pt_BR / en_US) and prepared for packaging as an executable (distribution without the need for manual installation of Python dependencies). No new features were added, preserving the simplicity and focus of the application.
 
 
-
-_____________________________
-
+__________________________________________________________
 
 
 RELEASE NOTES: Version: 0.0.1.0

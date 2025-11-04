@@ -1,5 +1,5 @@
 COMPRESSION MANAGER
-Version: 0.0.2.0
+Version: 0.0.3.0
 Authors: Fernando Nillsson Cidade
 
 Summary:
@@ -56,6 +56,19 @@ Known limitations:
 
 License:
 - Third-party components follow their respective licenses; complete license and notice information is available in the "About" dialog and license files distributed with the installer.
+
+    This software includes third-party components, including:
+
+    - 7‑Zip, Copyright (C) 1999‑2025 Igor Pavlov, distributed under the GNU LGPL,
+    BSD 2‑clause, BSD 3‑clause and the unRAR restriction.
+    - Code derived from Apple Inc. (LZFSE, BSD 3‑clause).
+    - Code derived from Facebook Inc. (ZSTD, BSD 3‑clause).
+    - Code derived from Yann Collet (XXH64, BSD 2‑clause).
+    - Code derived from Alexander Roshal (unRAR, usage restriction).
+
+    The full texts of the licenses and copyright notices
+    are included in the License.txt file and the LICENSES
+    directory distributed with this installer.
 
 Contact and support:
 - Author: Fernando Nillsson Cidade

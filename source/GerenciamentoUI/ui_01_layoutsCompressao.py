@@ -1,4 +1,4 @@
-from PySide6.QtWidgets import QHBoxLayout, QVBoxLayout, QLabel, QWidget
+from PySide6.QtWidgets import QHBoxLayout, QVBoxLayout, QLabel, QWidget, QSizePolicy
 from PySide6.QtCore import Qt, QCoreApplication
 from utils.LogManager import LogManager
 
@@ -88,11 +88,13 @@ class LayoutsCompressao:
 
             left_widget = QWidget()
             left_widget.setLayout(layout_1)
-            left_widget.setMinimumWidth(self._max_left_width)
+            left_widget.setFixedWidth(self._max_left_width)
+            left_widget.setSizePolicy(QSizePolicy.Fixed, QSizePolicy.Preferred)
 
             for w in self._left_widgets:
                 try:
-                    w.setMinimumWidth(self._max_left_width)
+                    w.setFixedWidth(self._max_left_width)
+                    w.setSizePolicy(QSizePolicy.Fixed, QSizePolicy.Preferred)
 
                 except Exception:
                     pass
