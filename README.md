@@ -9,14 +9,14 @@
 
 ## <a id="ptbr"></a>🇧🇷 Português (BR)
 
-> **Observação:** Este repositório refere-se à versão **v0.0.2.0** do Projeto COMPRESSION MANAGER. Apoie o projeto e adquira a versão paga através do link: [Instalar via Microsoft Store](https://apps.microsoft.com/detail/9PJMT90R953K)
+> **Observação:** Este repositório refere-se à versão **v0.0.3.0** do Projeto COMPRESSION MANAGER. Apoie o projeto e adquira a versão paga através do link: [Instalar via Microsoft Store](https://apps.microsoft.com/detail/9PJMT90R953K)
 
 <details>
 <summary>Clique para expandir o README em português</summary>
 
 # COMPRESSION MANAGER
 
-Versão: v0.0.2.0  
+Versão: v0.0.3.0  
 Autor: Fernando Nillsson Cidade
 
 COMPRESSION MANAGER é um utilitário gráfico leve para Windows projetado para empacotamento, extração e verificação de integridade de arquivos e pastas. Oferece suporte a múltiplos formatos (ZIP, 7Z, TAR, WIM e outros reconhecidos pelo 7‑Zip), seleção de vários diretórios de saída, métodos de compressão configuráveis, fila de processos e operação via arrastar-e-soltar. A interface é multilíngue (pt_BR / en_US) e preparada para empacotamento como executável (distribuição sem necessidade de instalação manual de dependências Python).
@@ -235,14 +235,14 @@ The license for original unRAR code has the following restriction:
 
 ## <a id="enus"></a>🇺🇸 English (US)
 
-> **Note:** This repository refers to the **v0.0.2.0** version of the COMPRESSION MANAGER Project. Support the project and purchase the paid version through the link: [Instalar via Microsoft Store](https://apps.microsoft.com/detail/9PJMT90R953K)
+> **Note:** This repository refers to the **v0.0.3.0** version of the COMPRESSION MANAGER Project. Support the project and purchase the paid version through the link: [Instalar via Microsoft Store](https://apps.microsoft.com/detail/9PJMT90R953K)
 
 <details>
 <summary>Click to expand the README in English</summary>
 
 # COMPRESSION MANAGER
 
-Version: v0.0.2.0  
+Version: v0.0.3.0  
 Author: Fernando Nillsson Cidade
 
 Compression Manager is a lightweight graphical utility for Windows designed for packing, extracting and integrity testing of files and folders. It supports multiple formats (ZIP, 7Z, TAR, WIM and other formats recognized by 7‑Zip), multiple output directories per format, configurable compression methods, a job queue and drag-and-drop operation. The interface is multilingual (pt_BR / en_US) and prepared for packaging as an executable (no manual Python dependency installation required for end users).
