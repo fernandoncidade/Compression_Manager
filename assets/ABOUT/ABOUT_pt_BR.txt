@@ -1,5 +1,5 @@
 COMPRESSION MANAGER
-Versão: 0.0.1.0
+Versão: 0.0.2.0
 Autores: Fernando Nillsson Cidade
 
 Resumo:

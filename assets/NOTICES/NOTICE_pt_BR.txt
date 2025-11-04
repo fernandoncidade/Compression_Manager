@@ -62,4 +62,4 @@ Notas finais
 - Este documento foi ajustado para refletir as dependências e a estrutura do projeto COMPRESSION MANAGER (ver README.md, ABOUT e requirements.txt).
 - Mantenha backups dos seus dados antes de atualizar ou substituir bibliotecas no executável.
 
-Versão do documento: 7 de Outubro de 2025
+Versão do documento: 28 de Outubro de 2025

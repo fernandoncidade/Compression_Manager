@@ -1,4 +1,20 @@
+NOTAS DE LANÇAMENTO: Versão: 0.0.2.0
+28 de Outubro de 2025
+
+Resumo:
+Foram implementadas melhorias na estabilidade geral, correções de bugs.
+
+Funcionalidades principais:
+- O propósito do aplicativo permanece o mesmo: um utilitário gráfico leve para Windows projetado para empacotamento, extração e verificação de integridade de arquivos e pastas. Oferece suporte a múltiplos formatos (ZIP, 7Z, TAR, WIM e outros reconhecidos pelo 7‑Zip), seleção de vários diretórios de saída, métodos de compressão configuráveis, fila de processos e operação via arrastar-e-soltar. A interface é multilíngue (pt_BR / en_US) e preparada para empacotamento como executável (distribuição sem necessidade de instalação manual de dependências Python). Não foram adicionados novos recursos, preservando a simplicidade e o foco do aplicativo.
+
+
+
+_____________________________
+
+
+
 NOTAS DE LANÇAMENTO: Versão: 0.0.1.0
+07 de Outubro de 2025
 
 Resumo:
 Manager Compression é um utilitário gráfico leve para Windows projetado para empacotamento, extração e verificação de integridade de arquivos e pastas. Oferece suporte a múltiplos formatos (ZIP, 7Z, TAR, WIM e outros reconhecidos pelo 7‑Zip), seleção de vários diretórios de saída, métodos de compressão configuráveis, fila de processos e operação via arrastar-e-soltar. A interface é multilíngue (pt_BR / en_US) e preparada para empacotamento como executável (distribuição sem necessidade de instalação manual de dependências Python).

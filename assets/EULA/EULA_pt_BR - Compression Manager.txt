@@ -1,5 +1,5 @@
 LICENÇA DE USO DE USUÁRIO FINAL - COMPRESSION MANAGER
-Versão 0.0.1.0, 7 de Outubro de 2025
+Versão 0.0.2.0, 28 de Outubro de 2025
 
 Copyright (c) 2025 Fernando Nillsson Cidade. Todos os direitos reservados.
 
@@ -59,4 +59,4 @@ Ao instalar, copiar ou utilizar o Software distribuído como executável, você 
 Contato para informações e suporte: canais e endereços fornecidos no instalador/distribuição.
 Autor / Contato: Fernando Nillsson Cidade — E-mail: linceu_lighthouse@outlook.com
 
-Data: 7 de Outubro de 2025
+Data: 28 de Outubro de 2025

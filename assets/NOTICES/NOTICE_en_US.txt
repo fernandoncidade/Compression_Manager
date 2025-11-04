@@ -62,4 +62,4 @@ Final notes
 - This document has been adjusted to reflect the dependencies and structure of the COMPRESSION MANAGER project (see README.md, ABOUT and requirements.txt).
 - Keep backups of your data before updating or replacing libraries in the executable.
 
-Document version: October 7, 2025
+Document version: October 28, 2025
