@@ -58,5 +58,3 @@ By installing, copying or using the Software distributed as an executable, you a
 
 Contact for information and support: channels and addresses provided in the installer/distribution.
 Author / Contact: Fernando Nillsson Cidade — E-mail: linceu_lighthouse@outlook.com
-
-Date: December 9, 2025

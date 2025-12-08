@@ -1,3 +1,5 @@
+Version 0.0.4.0, December 9, 2025
+
 Notice of Licenses and Third-Party Software Attributions
 
 This document lists the main third-party libraries and components used in the COMPRESSION MANAGER project and provides references to their licenses. The purpose is to meet distribution requirements (including LGPL compliance for Qt/PySide6 libraries) and to provide information for users and integrators. Project dependencies are listed in the requirements.txt file included in the repository/installer.
@@ -72,5 +74,3 @@ Contact for source code requests or license clarifications
 Final notes
 - This document has been adjusted to reflect the dependencies and structure of the COMPRESSION MANAGER project (see README.md, ABOUT and requirements.txt).
 - Keep backups of your data before updating or replacing libraries in the executable.
-
-Document version: December 9, 2025

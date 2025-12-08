@@ -1,7 +1,7 @@
 from PySide6.QtWidgets import QListWidget
 from PySide6.QtCore import Qt
 from PySide6.QtGui import QDragEnterEvent, QDropEvent, QDragMoveEvent
-from utils.LogManager import LogManager
+from source.utils.LogManager import LogManager
 
 logger = LogManager.get_logger()
 

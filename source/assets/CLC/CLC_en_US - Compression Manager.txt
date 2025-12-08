@@ -1,4 +1,6 @@
 COMMERCIAL LICENSE AGREEMENT - COMPRESSION MANAGER
+Version: 0.0.4.0
+Date: December 9, 2025
 
 This Commercial License Agreement ("Agreement") is entered into between:
 
@@ -78,8 +80,6 @@ FINAL PROVISIONS
 - It is stated that, when applicable, the Accessibility Statement and documentation related to Microsoft Store requirements compliance are included in the installation package and available for consultation by the LICENSEE.
 
 IN WITNESS WHEREOF, the parties execute this Agreement.
-
-Brazil, Paraná, São José dos Pinhais, December 9, 2025
 
 Fernando Nillsson Cidade
 ______________________________

@@ -6,8 +6,8 @@ from PySide6.QtCore import QCoreApplication, Qt
 from functools import partial
 from enum import Enum
 from source.GerenciamentoUI.ui_02_gerenteGUILayouts import GerenciadorInterface
-from utils.CaminhoPersistenteUtils import obter_caminho_persistente
-from utils.LogManager import LogManager
+from source.utils.CaminhoPersistenteUtils import obter_caminho_persistente
+from source.utils.LogManager import LogManager
 
 logger = LogManager.get_logger()
 

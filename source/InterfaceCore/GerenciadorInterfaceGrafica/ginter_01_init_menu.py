@@ -2,7 +2,7 @@ from PySide6.QtCore import QCoreApplication
 from PySide6.QtGui import QAction
 from source.MotoresCompressao.mtcomp_01_metodosCompressao import MenuPersistente
 from source.InterfaceCore.GerenciadorInterfaceGrafica.ginter_20_exibir_sobre import exibir_sobre
-from utils.LogManager import LogManager
+from source.utils.LogManager import LogManager
 
 logger = LogManager.get_logger()
 

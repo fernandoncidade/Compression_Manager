@@ -3,8 +3,8 @@ import sys
 import subprocess
 import tempfile
 from PySide6.QtCore import QThread, Signal
-from utils.LogManager import LogManager
-from utils.ApplicationPathUtils import get_app_base_path
+from source.utils.LogManager import LogManager
+from source.utils.ApplicationPathUtils import get_app_base_path
 
 logger = LogManager.get_logger()
 

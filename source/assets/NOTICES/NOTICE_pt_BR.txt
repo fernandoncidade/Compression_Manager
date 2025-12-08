@@ -1,3 +1,5 @@
+Versão 0.0.4.0, 9 de dezembro de 2025
+
 Aviso de Licenças e Atribuições de Software de Terceiros
 
 Este documento lista as principais bibliotecas e componentes de terceiros utilizados no projeto COMPRESSION MANAGER e fornece referências às suas licenças. O objetivo é cumprir requisitos de distribuição (incluindo conformidade LGPL para bibliotecas Qt/PySide6) e oferecer informações para usuários e integradores. As dependências do projeto estão listadas no arquivo requirements.txt incluído no repositório/instalador.
@@ -72,5 +74,3 @@ Contato para pedidos de código-fonte ou esclarecimentos sobre licenças
 Notas finais
 - Este documento foi ajustado para refletir as dependências e a estrutura do projeto COMPRESSION MANAGER (ver README.md, ABOUT e requirements.txt).
 - Mantenha backups dos seus dados antes de atualizar ou substituir bibliotecas no executável.
-
-Versão do documento: 09 de Dezembro de 2025

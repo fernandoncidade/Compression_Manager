@@ -2,7 +2,7 @@ from PySide6.QtWidgets import QMainWindow
 from source.GerenciamentoUI.ui_01_layoutsCompressao import LayoutsCompressao
 from source.GerenciamentoUI.ui_02_gerenteGUILayouts import GerenciadorInterface
 from source.MotoresCompressao.mtcomp_01_metodosCompressao import MetodoCompressao
-from language.tr_01_gerenciadorTraducao import GerenciadorTraducao
+from source.language.tr_01_gerenciadorTraducao import GerenciadorTraducao
 
 from .GerenciadorInterfaceGrafica.ginter_01_init_menu import init_menu
 from .GerenciadorInterfaceGrafica.ginter_02_update_compression_menus import update_compression_menus
@@ -23,7 +23,7 @@ from .GerenciadorInterfaceGrafica.ginter_16_on_method_toggled import on_method_t
 from .GerenciadorInterfaceGrafica.ginter_17_adjust_scroll_area import adjust_scroll_area
 from .GerenciadorInterfaceGrafica.ginter_18_remove_layout_widgets import remove_layout_widgets
 from .GerenciadorInterfaceGrafica.ginter_19_closeEvent import closeEvent
-from utils.LogManager import LogManager
+from source.utils.LogManager import LogManager
 
 logger = LogManager.get_logger()
 

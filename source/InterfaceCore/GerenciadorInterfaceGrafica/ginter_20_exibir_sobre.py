@@ -11,7 +11,7 @@ from source.GerenciamentoUI.ui_05_OpcoesSobre import (
     LICENSE_OWNER
 )
 from PySide6.QtWidgets import QMessageBox
-from utils.LogManager import LogManager
+from source.utils.LogManager import LogManager
 logger = LogManager.get_logger()
 
 def get_text(text):

@@ -1,4 +1,6 @@
 CONTRATO DE LICENCIAMENTO COMERCIAL - COMPRESSION MANAGER
+Versão: 0.0.4.0
+Data: 9 de dezembro de 2025
 
 Este Contrato de Licenciamento Comercial ("Contrato") é celebrado entre:
 
@@ -78,8 +80,6 @@ DISPOSIÇÕES FINAIS
 - Declara-se que, quando aplicável, a Declaração de Acessibilidade e documentação relativas à conformidade com requisitos da Microsoft Store estão incluídas no pacote de instalação e disponíveis para consulta pelo LICENCIADO.
 
 E por estarem justas e contratadas, as partes celebram o presente Contrato.
-
-Brasil, Paraná, São José dos Pinhais, 09 de Dezembro de 2025
 
 Fernando Nillsson Cidade
 ______________________________

@@ -1,5 +1,5 @@
-from utils.ApplicationPathUtils import load_text_file
-from utils.LogManager import LogManager
+from source.utils.ApplicationPathUtils import load_text_file
+from source.utils.LogManager import LogManager
 logger = LogManager.get_logger()
 
 try:

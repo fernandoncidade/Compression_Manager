@@ -5,7 +5,7 @@ from PySide6.QtWidgets import (QMainWindow, QFileDialog, QTreeView, QMessageBox)
 from source.MotoresCompressao.mtcomp_02_motoresCompressao import (buscar_sevenzip_executavel, CompressaoZIP, Compressao7Z, CompressaoTAR, CompressaoWIM, TesteIntegridade, Extracao)
 from .ui_03_dragDrop import DragDropListWidget
 from .ui_04_dialogTraducao import FileDialogTraduzivel, MessageBoxTraduzivel
-from utils.LogManager import LogManager
+from source.utils.LogManager import LogManager
 
 logger = LogManager.get_logger()
 
