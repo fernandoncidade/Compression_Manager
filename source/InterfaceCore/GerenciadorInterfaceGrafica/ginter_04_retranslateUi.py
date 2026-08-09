@@ -85,8 +85,24 @@ def retranslateUi(self):
     self.idiomas_menu.setTitle(QCoreApplication.translate("InterfaceGrafica", "Idiomas"))
     self.compression_method_action.setText(QCoreApplication.translate("InterfaceGrafica", "Selecionar Método de Compressão"))
     self.opcoes_menu.setTitle(QCoreApplication.translate("InterfaceGrafica", "Opções"))
-    self.sobre_menu.setTitle(QCoreApplication.translate("InterfaceGrafica", "Sobre"))
-    self.sobre_action.setText(QCoreApplication.translate("InterfaceGrafica", "Sobre o Aplicativo"))
+    
+    if hasattr(self, "manual_action"):
+        self.manual_action.setText(QCoreApplication.translate("InterfaceGrafica", "Manual"))
+        
+    if hasattr(self, "sobre_action"):
+        self.sobre_action.setText(QCoreApplication.translate("InterfaceGrafica", "Sobre"))
+
+    if hasattr(self, "layouts_menu"):
+        self.layouts_menu.setTitle(QCoreApplication.translate("InterfaceGrafica", "Layouts"))
+
+    if hasattr(self, "primeiro_layout_action"):
+        self.primeiro_layout_action.setText(QCoreApplication.translate("InterfaceGrafica", "Primeiro Layout"))
+
+    if hasattr(self, "segundo_layout_action"):
+        self.segundo_layout_action.setText(QCoreApplication.translate("InterfaceGrafica", "Segundo Layout"))
+
+    if hasattr(self, "methods_group_2") and self.methods_group_2 is not None:
+        self.methods_group_2.setTitle(QCoreApplication.translate("InterfaceGrafica", "Métodos de compressão e extração"))
 
     for button, text in self.main_buttons.items():
         button.setText(QCoreApplication.translate("InterfaceGrafica", text))
@@ -102,6 +118,25 @@ def retranslateUi(self):
     if hasattr(self, "methods_group"):
         self.methods_group.setTitle(QCoreApplication.translate("InterfaceGrafica", "Métodos de compressão e extração"))
 
+    if hasattr(self, 'main_buttons_2') and self.main_buttons_2:
+        for button, text in self.main_buttons_2.items():
+            button.setText(QCoreApplication.translate("InterfaceGrafica", text))
+
+    if hasattr(self, 'folder_label_2') and self.folder_label_2 is not None:
+        self.folder_label_2.setText(QCoreApplication.translate("InterfaceGrafica", "Diretório(s) Pastas e Arquivos:"))
+
+    if hasattr(self, 'checkboxes_2') and self.checkboxes_2:
+        for method, checkbox in self.checkboxes_2.items():
+            if method == 'extracao':
+                checkbox.setText(QCoreApplication.translate("InterfaceGrafica", "EXTRAÇÃO"))
+            else:
+                checkbox.setText(method.upper())
+
     self.rebuild_method_layouts()
     self.gerenciador_interface.atualizar_traducoes_dialogos()
+
+    if hasattr(self, 'gerenciador_interface_2') and hasattr(self, 'segundo_layout_action') and self.segundo_layout_action.isChecked():
+        self.gerenciador_interface_2.atualizar_traducoes_dialogos()
+
     self.update_compression_menus()
+

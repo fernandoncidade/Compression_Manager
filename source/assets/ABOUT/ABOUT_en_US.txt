@@ -1,5 +1,5 @@
 COMPRESSION MANAGER
-Version: 0.0.4.0
+Version: 2026.8.9.0
 Authors: Fernando Nillsson Cidade
 
 Summary:

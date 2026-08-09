@@ -23,6 +23,13 @@ from .GerenciadorInterfaceGrafica.ginter_16_on_method_toggled import on_method_t
 from .GerenciadorInterfaceGrafica.ginter_17_adjust_scroll_area import adjust_scroll_area
 from .GerenciadorInterfaceGrafica.ginter_18_remove_layout_widgets import remove_layout_widgets
 from .GerenciadorInterfaceGrafica.ginter_19_closeEvent import closeEvent
+from .GerenciadorInterfaceGrafica.ginter_21_toggle_segundo_layout import toggle_segundo_layout
+from .GerenciadorInterfaceGrafica.ginter_22_create_scroll_area_2 import create_scroll_area_2
+from .GerenciadorInterfaceGrafica.ginter_23_create_first_quadrant_2 import create_first_quadrant_2
+from .GerenciadorInterfaceGrafica.ginter_24_create_second_quadrant_2 import create_second_quadrant_2
+from .GerenciadorInterfaceGrafica.ginter_25_create_method_checkboxes_2 import create_method_checkboxes_2
+from .GerenciadorInterfaceGrafica.ginter_26_on_method_toggled_2 import on_method_toggled_2
+from .GerenciadorInterfaceGrafica.ginter_27_adapt_layout_orientation import adapt_layout_orientation
 from source.utils.LogManager import LogManager
 
 logger = LogManager.get_logger()
@@ -35,6 +42,12 @@ class InterfaceGrafica(QMainWindow, MetodoCompressao):
         self.layouts_compressao = LayoutsCompressao(self.gerenciador_interface, self.create_button)
         self.compression_method_layouts = self.layouts_compressao.create_compression_method_layouts()
         self.current_layouts = {}
+
+        self.gerenciador_interface_2 = GerenciadorInterface()
+        self.layouts_compressao_2 = LayoutsCompressao(self.gerenciador_interface_2, self.create_button)
+        self.compression_method_layouts_2 = self.layouts_compressao_2.create_compression_method_layouts()
+        self.current_layouts_2 = {}
+        self.checkboxes_2 = {}
 
         self.gerenciador_traducao = GerenciadorTraducao()
         self.gerenciador_traducao.idioma_alterado.connect(self.retranslateUi)
@@ -99,6 +112,31 @@ class InterfaceGrafica(QMainWindow, MetodoCompressao):
 
     def remove_layout_widgets(self, layout):
         remove_layout_widgets(self, layout)
+
+    def toggle_segundo_layout(self):
+        toggle_segundo_layout(self)
+
+    def create_scroll_area_2(self):
+        return create_scroll_area_2(self)
+
+    def create_first_quadrant_2(self):
+        return create_first_quadrant_2(self)
+
+    def create_second_quadrant_2(self):
+        return create_second_quadrant_2(self)
+
+    def create_method_checkboxes_2(self, layout):
+        return create_method_checkboxes_2(self, layout)
+
+    def on_method_toggled_2(self):
+        on_method_toggled_2(self)
+
+    def adapt_layout_orientation(self):
+        adapt_layout_orientation(self)
+
+    def resizeEvent(self, event):
+        super().resizeEvent(event)
+        self.adapt_layout_orientation()
 
     def closeEvent(self, event):
         closeEvent(self, event)

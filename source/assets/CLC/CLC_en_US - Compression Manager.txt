@@ -1,6 +1,6 @@
 COMMERCIAL LICENSE AGREEMENT - COMPRESSION MANAGER
-Version: 0.0.4.0
-Date: December 9, 2025
+Version: 2026.8.9.0
+Date: August 9, 2026
 
 This Commercial License Agreement ("Agreement") is entered into between:
 

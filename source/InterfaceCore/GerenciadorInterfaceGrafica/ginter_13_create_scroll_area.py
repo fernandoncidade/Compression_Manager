@@ -18,7 +18,7 @@ def create_scroll_area(self):
     self.scroll_area_layout = QVBoxLayout(self.scroll_area_widget)
     self.scroll_area.setWidget(self.scroll_area_widget)
 
-    self.scroll_area.setMinimumSize(600, 347)
+    self.scroll_area.setMinimumSize(280, 200)
 
     self.method_layouts_container = QVBoxLayout()
     self.scroll_area_layout.addLayout(self.method_layouts_container)

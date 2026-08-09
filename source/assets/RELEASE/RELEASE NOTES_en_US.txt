@@ -1,3 +1,25 @@
+RELEASE NOTES: Version 2026.8.9.0
+August 9, 2026
+
+What was done:
+- Added a second independent workspace. You can now enable a second column on the main screen to perform different tasks simultaneously.
+- Reorganized the Settings menu, making it easier to access compression methods, layout options, and language settings.
+
+What this means for you:
+- Increased productivity: You can prepare and execute compression or extraction tasks in two completely separate panels. The folders, files, and options chosen on one side do not interfere with the other.
+- More intuitive interface: The top settings menu is cleaner and more organized, allowing you to quickly find the features you need.
+
+How to verify:
+- Update and open the program.
+- Go to Settings > Layouts and enable the second layout. A new right column will appear.
+- Add files or folders on one side and notice that the other column remains unchanged.
+- Enable different formats (ZIP, 7Z, etc.) on each side independently.
+- Check the new organization by accessing the Settings menu.
+
+
+__________________________________________________________
+
+
 RELEASE NOTES: Version: 0.0.4.0
 December 9, 2025
 

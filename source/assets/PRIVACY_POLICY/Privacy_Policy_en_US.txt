@@ -1,6 +1,6 @@
 Privacy Policy of COMPRESSION MANAGER
-Last updated: December 9, 2025
-Version: 0.0.4.0
+Last updated: August 9, 2026
+Version: 2026.8.9.0
 
 This Policy describes how COMPRESSION MANAGER (“Software”) handles user information. The Software is designed to operate locally, without telemetry collection.
 

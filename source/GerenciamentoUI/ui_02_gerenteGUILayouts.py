@@ -76,6 +76,8 @@ class GerenciadorInterface(QMainWindow):
     def _browse(self, file_mode, listbox):
         import os
 
+        target_listboxes = listbox if isinstance(listbox, (list, tuple)) else [listbox]
+
         if sys.platform == "win32" and file_mode == QFileDialog.FileMode.Directory:
             dialog = FileDialogTraduzivel()
             dialog.setFileMode(file_mode)
@@ -96,15 +98,16 @@ class GerenciadorInterface(QMainWindow):
                 if dialog.exec() == QFileDialog.DialogCode.Accepted:
                     selected_dirs = dialog.selectedFiles()
                     if selected_dirs:
-                        for dir_path in selected_dirs:
-                            exists = False
-                            for i in range(listbox.count()):
-                                if listbox.item(i).text() == dir_path:
-                                    exists = True
-                                    break
+                        for lb in target_listboxes:
+                            for dir_path in selected_dirs:
+                                exists = False
+                                for i in range(lb.count()):
+                                    if lb.item(i).text() == dir_path:
+                                        exists = True
+                                        break
 
-                            if not exists:
-                                listbox.addItem(dir_path)
+                                if not exists:
+                                    lb.addItem(dir_path)
 
                         self.last_directory = os.path.dirname(selected_dirs[0])
 
@@ -153,7 +156,15 @@ class GerenciadorInterface(QMainWindow):
         if dialog.exec() == QFileDialog.DialogCode.Accepted:
             selected_items = dialog.selectedFiles()
             if selected_items:
-                listbox.addItems(selected_items)
+                for lb in target_listboxes:
+                    for item in selected_items:
+                        exists = False
+                        for i in range(lb.count()):
+                            if lb.item(i).text() == item:
+                                exists = True
+                                break
+                        if not exists:
+                            lb.addItem(item)
                 self.last_directory = os.path.dirname(selected_items[0])
 
     def select_output_path(self, output_listbox):

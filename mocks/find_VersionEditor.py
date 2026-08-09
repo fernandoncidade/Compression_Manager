@@ -1,6 +1,7 @@
 import sys
 import re
 from pathlib import Path
+from datetime import datetime
 
 # garante que a raiz do projeto esteja no sys.path quando o script for executado diretamente
 # (resolve o erro "ModuleNotFoundError: No module named 'source'")
@@ -54,70 +55,86 @@ def get_files_for_base(base_dir: Path = BASE_DIR):
 
     return files
 
-EXPECTED = {
-    "privacy_pt": [
-        "Última atualização: 26 de novembro de 2025",
-        "Versão: 2025.11.26.0",
-    ],
-    "privacy_en": [
-        "Last updated: November 26, 2025",
-        "Version: 2025.11.26.0",
-    ],
-    "notice_pt": [
-        "Versão 2025.11.26.0, 26 de novembro de 2025",
-    ],
-    "notice_en": [
-        "Version 2025.11.26.0, November 26, 2025",
-    ],
-    "eula_pt": [
-        "Versão 2025.11.26.0, 26 de novembro de 2025",
-    ],
-    "eula_en": [
-        "Version 2025.11.26.0, November 26, 2025",
-    ],
-    "copyright_pt": [
-        "Versão 2025.11.26.0, 26 de novembro de 2025",
-        "Copyright (C) 2025–2026 Fernando Nillsson Cidade. Todos os direitos reservados.",
-    ],
-    "copyright_en": [
-        "Version 2025.11.26.0, November 26, 2025",
-        "Copyright (C) 2025–2026 Fernando Nillsson Cidade. All rights reserved.",
-    ],
-    "clc_pt": [
-        "Versão: 2025.11.26.0",
-        "Data: 26 de novembro de 2025",
-    ],
-    "clc_en": [
-        "Version: 2025.11.26.0",
-        "Date: November 26, 2025",
-    ],
-    "about_pt": [
-        "Versão: 2025.11.26.0",
-    ],
-    "about_en": [
-        "Version: 2025.11.26.0",
-    ],
-}
-
 PT_MONTHS = ["Janeiro","Fevereiro","Março","Abril","Maio","Junho","Julho","Agosto","Setembro","Outubro","Novembro","Dezembro"]
 PT_MONTHS_LOWER = [m.lower() for m in PT_MONTHS]
 EN_MONTHS = ["January","February","March","April","May","June","July","August","September","October","November","December"]
 
 def read_file(path: Path):
     try:
-        # tenta várias decodificações para evitar problemas com BOM/encodings diferentes
         try:
             return path.read_text(encoding="utf-8")
-
         except Exception:
             try:
                 return path.read_text(encoding="utf-8-sig")
-
             except Exception:
                 return path.read_text(encoding="latin-1")
-
     except Exception:
         return None
+
+def extract_date_and_version_from_files(base_dir: Path = BASE_DIR):
+    now = datetime.now()
+    day = now.day
+    month_idx = now.month - 1
+    year = now.year
+    # A versão é um espelho da data sem zeros à esquerda (ex: 2026.8.9.0)
+    version = f"{year}.{now.month}.{day}.0"
+
+    return version, day, month_idx, year
+
+def get_expected_dict(pt_version="2026.8.9.0", pt_day=9, pt_month_index=7, pt_year=2026,
+                      en_version="2026.8.9.0", en_day=9, en_month_index=7, en_year=2026):
+    pt_month_name = PT_MONTHS_LOWER[pt_month_index]
+    pt_date = f"{pt_day} de {pt_month_name} de {pt_year}"
+    en_month_name = EN_MONTHS[en_month_index]
+    en_date = f"{en_month_name} {en_day}, {en_year}"
+
+    return {
+        "privacy_pt": [
+            f"Última atualização: {pt_date}",
+            f"Versão: {pt_version}",
+        ],
+        "privacy_en": [
+            f"Last updated: {en_date}",
+            f"Version: {en_version}",
+        ],
+        "notice_pt": [
+            f"Versão {pt_version}, {pt_date}",
+        ],
+        "notice_en": [
+            f"Version {en_version}, {en_date}",
+        ],
+        "eula_pt": [
+            f"Versão {pt_version}, {pt_date}",
+        ],
+        "eula_en": [
+            f"Version {en_version}, {en_date}",
+        ],
+        "copyright_pt": [
+            f"Versão {pt_version}, {pt_date}",
+            "Copyright (C) 2025–2026 Fernando Nillsson Cidade. Todos os direitos reservados.",
+        ],
+        "copyright_en": [
+            f"Version {en_version}, {en_date}",
+            "Copyright (C) 2025–2026 Fernando Nillsson Cidade. All rights reserved.",
+        ],
+        "clc_pt": [
+            f"Versão: {pt_version}",
+            f"Data: {pt_date}",
+        ],
+        "clc_en": [
+            f"Version: {en_version}",
+            f"Date: {en_date}",
+        ],
+        "about_pt": [
+            f"Versão: {pt_version}",
+        ],
+        "about_en": [
+            f"Version: {en_version}",
+        ],
+    }
+
+_init_ver, _init_day, _init_m_idx, _init_year = extract_date_and_version_from_files(BASE_DIR)
+EXPECTED = get_expected_dict(_init_ver, _init_day, _init_m_idx, _init_year, _init_ver, _init_day, _init_m_idx, _init_year)
 
 # padrões para extrair o que realmente está nos arquivos (não comparar com EXPECTED)
 PATTERNS = {
@@ -177,17 +194,14 @@ def check_expected_lines(base_dir: Path = BASE_DIR):
         found = []
         missing = []
 
-        # para cada padrão associado àquele arquivo, procurar a linha correspondente
         patterns = PATTERNS.get(key, [])
         for pat in patterns:
             m = re.search(pat, txt, flags=re.MULTILINE)
             if m:
                 found.append(m.group(1).strip())
-
             else:
                 missing.append(pat)
 
-        # se não houver padrões definidos, devolve as 3 primeiras linhas do arquivo como fallback
         if not patterns:
             lines = [l.rstrip("\r\n") for l in txt.splitlines()]
             found = lines[:3] if lines else []
@@ -201,7 +215,6 @@ def replace_file_content(path: Path, new_text: str):
     try:
         path.write_text(new_text, encoding="utf-8")
         return True, ""
-
     except Exception as e:
         return False, str(e)
 
@@ -224,41 +237,39 @@ def apply_updates(pt_version, pt_day, pt_month_index, pt_year, en_version, en_da
 
         try:
             if key == "privacy_pt":
-                new_txt = re.sub(r'^(Versão:\s*).*$',lambda m: m.group(1) + pt_version, new_txt, flags=re.MULTILINE)
-                new_txt = re.sub(r'^(Última atualização:\s*).*$',lambda m: m.group(1) + pt_date, new_txt, flags=re.MULTILINE)
+                new_txt = re.sub(r'^(Versão:\s*).*$', lambda m: m.group(1) + pt_version, new_txt, flags=re.MULTILINE)
+                new_txt = re.sub(r'^(Última atualização:\s*).*$', lambda m: m.group(1) + pt_date, new_txt, flags=re.MULTILINE)
 
             elif key == "privacy_en":
-                new_txt = re.sub(r'^(Version:\s*).*$',lambda m: m.group(1) + en_version, new_txt, flags=re.MULTILINE)
-                new_txt = re.sub(r'^(Last updated:\s*).*$',lambda m: m.group(1) + en_date, new_txt, flags=re.MULTILINE)
+                new_txt = re.sub(r'^(Version:\s*).*$', lambda m: m.group(1) + en_version, new_txt, flags=re.MULTILINE)
+                new_txt = re.sub(r'^(Last updated:\s*).*$', lambda m: m.group(1) + en_date, new_txt, flags=re.MULTILINE)
 
             elif key in ("notice_pt", "eula_pt", "copyright_pt"):
-                new_txt = re.sub(r'^(Versão\s*)([\d\.]+)\s*,\s*.*$',f"Versão {pt_version}, {pt_date}", new_txt, flags=re.MULTILINE)
+                new_txt = re.sub(r'^(Versão\s*)([\d\.]+)\s*,\s*.*$', f"Versão {pt_version}, {pt_date}", new_txt, flags=re.MULTILINE)
 
             elif key in ("notice_en", "eula_en", "copyright_en"):
-                new_txt = re.sub(r'^(Version\s*)([\d\.]+)\s*,\s*.*$',f"Version {en_version}, {en_date}", new_txt, flags=re.MULTILINE)
+                new_txt = re.sub(r'^(Version\s*)([\d\.]+)\s*,\s*.*$', f"Version {en_version}, {en_date}", new_txt, flags=re.MULTILINE)
 
             elif key == "clc_pt":
-                new_txt = re.sub(r'^(Versão:\s*).*$',lambda m: m.group(1) + pt_version, new_txt, flags=re.MULTILINE)
-                new_txt = re.sub(r'^(Data:\s*).*$',lambda m: m.group(1) + pt_date, new_txt, flags=re.MULTILINE)
+                new_txt = re.sub(r'^(Versão:\s*).*$', lambda m: m.group(1) + pt_version, new_txt, flags=re.MULTILINE)
+                new_txt = re.sub(r'^(Data:\s*).*$', lambda m: m.group(1) + pt_date, new_txt, flags=re.MULTILINE)
 
             elif key == "clc_en":
-                new_txt = re.sub(r'^(Version:\s*).*$',lambda m: m.group(1) + en_version, new_txt, flags=re.MULTILINE)
-                new_txt = re.sub(r'^(Date:\s*).*$',lambda m: m.group(1) + en_date, new_txt, flags=re.MULTILINE)
+                new_txt = re.sub(r'^(Version:\s*).*$', lambda m: m.group(1) + en_version, new_txt, flags=re.MULTILINE)
+                new_txt = re.sub(r'^(Date:\s*).*$', lambda m: m.group(1) + en_date, new_txt, flags=re.MULTILINE)
 
             elif key == "about_pt":
-                new_txt = re.sub(r'^(Versão:\s*).*$',lambda m: m.group(1) + pt_version, new_txt, flags=re.MULTILINE)
+                new_txt = re.sub(r'^(Versão:\s*).*$', lambda m: m.group(1) + pt_version, new_txt, flags=re.MULTILINE)
 
             elif key == "about_en":
-                new_txt = re.sub(r'^(Version:\s*).*$',lambda m: m.group(1) + en_version, new_txt, flags=re.MULTILINE)
+                new_txt = re.sub(r'^(Version:\s*).*$', lambda m: m.group(1) + en_version, new_txt, flags=re.MULTILINE)
 
             if new_txt != original:
                 ok, err = replace_file_content(path, new_txt)
                 if ok:
                     results.append((key, True, "atualizado"))
-
                 else:
                     results.append((key, False, f"erro escrita: {err}"))
-
             else:
                 results.append((key, False, "padrões não encontrados / sem alteração"))
 
@@ -273,21 +284,19 @@ class VersionEditor(QWidget):
         super().__init__()
         self.setWindowTitle("Editor de Versões / Datas - Lúmen (PT/EN)")
         self.resize(820, 520)
+        self._is_syncing = False
 
         try:
             icon_path = get_icon_path("autismo.ico")
             if icon_path:
                 self.setWindowIcon(QIcon(icon_path))
-
         except Exception as e:
             logger.error(f"Erro ao carregar ícone da aplicação: {e}", exc_info=True)
 
         layout = QVBoxLayout(self)
 
-        # pasta base selecionada (por padrão raiz do projeto)
         self.selected_base_dir = BASE_DIR
 
-        # pasta de arquivos: seleção pelo usuário
         folder_layout = QHBoxLayout()
         folder_layout.addWidget(QLabel("Pasta dos arquivos:"))
         self.folder_path = QLineEdit(str(self.selected_base_dir))
@@ -304,25 +313,22 @@ class VersionEditor(QWidget):
         pt_group.setLayout(pt_layout)
 
         pt_layout.addWidget(QLabel("Versão:"))
-        self.pt_version = QLineEdit("2025.11.26.0")
+        self.pt_version = QLineEdit()
         pt_layout.addWidget(self.pt_version)
 
         pt_layout.addWidget(QLabel("Dia:"))
         self.pt_day = QSpinBox()
         self.pt_day.setRange(1, 31)
-        self.pt_day.setValue(26)
         pt_layout.addWidget(self.pt_day)
 
         pt_layout.addWidget(QLabel("Mês:"))
         self.pt_month = QComboBox()
         self.pt_month.addItems(PT_MONTHS)
-        self.pt_month.setCurrentIndex(10)  # Novembro
         pt_layout.addWidget(self.pt_month)
 
         pt_layout.addWidget(QLabel("Ano:"))
         self.pt_year = QSpinBox()
         self.pt_year.setRange(1900, 3000)
-        self.pt_year.setValue(2025)
         pt_layout.addWidget(self.pt_year)
 
         layout.addWidget(pt_group)
@@ -333,31 +339,34 @@ class VersionEditor(QWidget):
         en_group.setLayout(en_layout)
 
         en_layout.addWidget(QLabel("Version:"))
-        self.en_version = QLineEdit("2025.11.26.0")
+        self.en_version = QLineEdit()
         en_layout.addWidget(self.en_version)
 
         en_layout.addWidget(QLabel("Day:"))
         self.en_day = QSpinBox()
         self.en_day.setRange(1, 31)
-        self.en_day.setValue(26)
         en_layout.addWidget(self.en_day)
 
         en_layout.addWidget(QLabel("Month:"))
         self.en_month = QComboBox()
         self.en_month.addItems(EN_MONTHS)
-        self.en_month.setCurrentIndex(10)  # November
         en_layout.addWidget(self.en_month)
 
         en_layout.addWidget(QLabel("Year:"))
         self.en_year = QSpinBox()
         self.en_year.setRange(1900, 3000)
-        self.en_year.setValue(2025)
         en_layout.addWidget(self.en_year)
 
         layout.addWidget(en_group)
 
         # Buttons and status
         btn_layout = QHBoxLayout()
+
+        self.sync_now_btn = QPushButton("📅 Data Atual")
+        self.sync_now_btn.setToolTip("Carrega a data atual do sistema de forma sincronizada")
+        self.sync_now_btn.clicked.connect(lambda: self.load_synced_date(use_files=False))
+        btn_layout.addWidget(self.sync_now_btn)
+
         self.check_btn = QPushButton("🔍 Verificar arquivos")
         self.check_btn.clicked.connect(self.on_check)
         btn_layout.addWidget(self.check_btn)
@@ -376,17 +385,99 @@ class VersionEditor(QWidget):
         self.status.setReadOnly(True)
         layout.addWidget(self.status)
 
+        self._connect_sync_signals()
+        self.load_synced_date(use_files=True)
         self.on_check()
+
+    def _connect_sync_signals(self):
+        self.pt_version.textChanged.connect(lambda val: self._sync_from_pt("version", val))
+        self.pt_day.valueChanged.connect(lambda val: self._sync_from_pt("day", val))
+        self.pt_month.currentIndexChanged.connect(lambda val: self._sync_from_pt("month", val))
+        self.pt_year.valueChanged.connect(lambda val: self._sync_from_pt("year", val))
+
+        self.en_version.textChanged.connect(lambda val: self._sync_from_en("version", val))
+        self.en_day.valueChanged.connect(lambda val: self._sync_from_en("day", val))
+        self.en_month.currentIndexChanged.connect(lambda val: self._sync_from_en("month", val))
+        self.en_year.valueChanged.connect(lambda val: self._sync_from_en("year", val))
+
+    def _sync_from_pt(self, field, value):
+        if self._is_syncing:
+            return
+        self._is_syncing = True
+        try:
+            if field == "version":
+                self.en_version.setText(value)
+            elif field == "day":
+                self.en_day.setValue(value)
+                new_version = f"{self.pt_year.value()}.{self.pt_month.currentIndex() + 1}.{value}.0"
+                self.pt_version.setText(new_version)
+                self.en_version.setText(new_version)
+            elif field == "month":
+                self.en_month.setCurrentIndex(value)
+                new_version = f"{self.pt_year.value()}.{value + 1}.{self.pt_day.value()}.0"
+                self.pt_version.setText(new_version)
+                self.en_version.setText(new_version)
+            elif field == "year":
+                self.en_year.setValue(value)
+                new_version = f"{value}.{self.pt_month.currentIndex() + 1}.{self.pt_day.value()}.0"
+                self.pt_version.setText(new_version)
+                self.en_version.setText(new_version)
+        finally:
+            self._is_syncing = False
+
+    def _sync_from_en(self, field, value):
+        if self._is_syncing:
+            return
+        self._is_syncing = True
+        try:
+            if field == "version":
+                self.pt_version.setText(value)
+            elif field == "day":
+                self.pt_day.setValue(value)
+                new_version = f"{self.en_year.value()}.{self.en_month.currentIndex() + 1}.{value}.0"
+                self.pt_version.setText(new_version)
+                self.en_version.setText(new_version)
+            elif field == "month":
+                self.pt_month.setCurrentIndex(value)
+                new_version = f"{self.en_year.value()}.{value + 1}.{self.en_day.value()}.0"
+                self.pt_version.setText(new_version)
+                self.en_version.setText(new_version)
+            elif field == "year":
+                self.pt_year.setValue(value)
+                new_version = f"{value}.{self.en_month.currentIndex() + 1}.{self.en_day.value()}.0"
+                self.pt_version.setText(new_version)
+                self.en_version.setText(new_version)
+        finally:
+            self._is_syncing = False
+
+    def load_synced_date(self, use_files=True):
+        version, day, month_idx, year = extract_date_and_version_from_files(None)
+
+        self._is_syncing = True
+        try:
+            self.pt_version.setText(version)
+            self.en_version.setText(version)
+
+            self.pt_day.setValue(day)
+            self.en_day.setValue(day)
+
+            self.pt_month.setCurrentIndex(month_idx)
+            self.en_month.setCurrentIndex(month_idx)
+
+            self.pt_year.setValue(year)
+            self.en_year.setValue(year)
+        finally:
+            self._is_syncing = False
 
     def on_select_folder(self):
         dir_path = QFileDialog.getExistingDirectory(self, "Selecione a pasta onde os arquivos estão", str(self.selected_base_dir))
         if dir_path:
             self.selected_base_dir = Path(dir_path)
             self.folder_path.setText(str(self.selected_base_dir))
+            self.load_synced_date(use_files=True)
             self.on_check()
 
     def on_check(self):
-        # passa a pasta selecionada para a verificação
         status = check_expected_lines(self.selected_base_dir)
         lines = [f"Base: {self.selected_base_dir}"]
         for key, info in status.items():
@@ -417,7 +508,6 @@ class VersionEditor(QWidget):
         en_month_index = self.en_month.currentIndex()
         en_year = self.en_year.value()
 
-        # passa a pasta selecionada para a atualização
         results = apply_updates(pt_version, pt_day, pt_month_index, pt_year,
                                 en_version, en_day, en_month_index, en_year,
                                 base_dir=self.selected_base_dir)

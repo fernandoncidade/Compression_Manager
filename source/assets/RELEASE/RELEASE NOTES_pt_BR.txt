@@ -1,3 +1,25 @@
+NOTAS DE LANÇAMENTO: Versão 2026.8.9.0
+9 de agosto de 2026
+
+O que foi feito:
+- Adicionado um segundo espaço de trabalho independente. Agora você pode ativar uma segunda coluna na tela principal para realizar diferentes tarefas simultaneamente.
+- Reorganização do menu de Configurações, facilitando o acesso às opções de métodos de compressão, escolha de layouts e troca de idiomas.
+
+O que muda para você:
+- Maior produtividade: É possível preparar e executar tarefas de compressão ou extração em dois painéis totalmente separados. As pastas, arquivos e opções escolhidas de um lado não interferem no outro.
+- Interface mais intuitiva: O menu superior de configurações está mais limpo e organizado, permitindo encontrar os recursos que precisa rapidamente.
+
+Como verificar:
+- Atualize e abra o programa.
+- Acesse o menu Configurações > Layouts e ative o segundo layout. Uma nova coluna direita aparecerá.
+- Adicione arquivos ou pastas de um lado e perceba que a outra coluna permanece inalterada.
+- Ative diferentes formatos (ZIP, 7Z, etc.) em cada um dos lados de forma independente.
+- Confira a nova organização acessando o menu de Configurações.
+
+
+__________________________________________________________
+
+
 NOTAS DE LANÇAMENTO: Versão: 0.0.4.0
 09 de Dezembro de 2025
 

@@ -134,6 +134,8 @@ class MetodoCompressao:
             compress_type_value = compress_type.value
 
             setattr(self.gerenciador_interface, f'compression_method_{compress_type_value}', method)
+            if hasattr(self, 'gerenciador_interface_2') and self.gerenciador_interface_2 is not None:
+                setattr(self.gerenciador_interface_2, f'compression_method_{compress_type_value}', method)
 
             if compress_type_value in self.method_actions:
                 for m, action in self.method_actions[compress_type_value].items():
@@ -154,6 +156,8 @@ class MetodoCompressao:
                     if config_key in config:
                         method = config[config_key]
                         setattr(self.gerenciador_interface, f'compression_method_{compress_type.value}', method)
+                        if hasattr(self, 'gerenciador_interface_2') and self.gerenciador_interface_2 is not None:
+                            setattr(self.gerenciador_interface_2, f'compression_method_{compress_type.value}', method)
 
         except FileNotFoundError:
             pass

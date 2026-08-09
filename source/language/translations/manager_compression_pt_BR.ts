@@ -279,6 +279,18 @@
         <source>Métodos de compressão e extração</source>
         <translation>Métodos de compressão e extração</translation>
     </message>
+    <message>
+        <source>Layouts</source>
+        <translation>Layouts</translation>
+    </message>
+    <message>
+        <source>Primeiro Layout</source>
+        <translation>Primeiro Layout</translation>
+    </message>
+    <message>
+        <source>Segundo Layout</source>
+        <translation>Segundo Layout</translation>
+    </message>
 </context>
 <context>
     <name>Dialog</name>

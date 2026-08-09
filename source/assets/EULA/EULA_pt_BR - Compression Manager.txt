@@ -1,5 +1,5 @@
 LICENÇA DE USO DE USUÁRIO FINAL - COMPRESSION MANAGER
-Versão 0.0.4.0, 9 de dezembro de 2025
+Versão 2026.8.9.0, 9 de agosto de 2026
 
 Copyright (c) 2025 Fernando Nillsson Cidade. Todos os direitos reservados.
 

@@ -46,7 +46,7 @@ jobs:
                 VERSION=$(echo "$msg" | grep -oE "$REGEX" | tail -1)
                 break
               fi
-            done < <(jq -r '.commits | reverse | .[].message' "$EVENT")
+            done < <(jq -r '.commits // [] | reverse | .[].message' "$EVENT")
           fi
 
           # 3) fallback: procurar no histórico git recente
@@ -69,7 +69,7 @@ jobs:
         if: steps.extract_version.outputs.has_version == 'true'
         run: |
           echo "=== Current versions in README.md ==="
-          grep -n -E 'v[0-9]+\.[0-9]+\.[0-9]+\.[0-9]+' README.md || echo "No versions found"
+          grep -n -E '(Versão|Version): v[0-9]+\.[0-9]+\.[0-9]+\.[0-9]+' README.md || echo "No versions found"
           echo "====================================="
       
       - name: Update README.md
@@ -81,13 +81,13 @@ jobs:
 
           cp README.md README.md.bak
           
-          BEFORE_COUNT=$(grep -o -E 'v[0-9]+\.[0-9]+\.[0-9]+\.[0-9]+' README.md | wc -l || true)
+          BEFORE_COUNT=$(grep -o -E '(Versão|Version): v[0-9]+\.[0-9]+\.[0-9]+\.[0-9]+' README.md | wc -l || true)
           echo "Found $BEFORE_COUNT version patterns before replacement"
 
-          # Substituir qualquer vX.X.X.X pelo $VERSION
-          sed -i -E "s/v[0-9]+\.[0-9]+\.[0-9]+\.[0-9]+/$VERSION/g" README.md
+          # Substituir apenas as ocorrências com 'Versão:' ou 'Version:' para evitar sobrescrever referências fixas
+          sed -i -E "s/(Versão|Version): v[0-9]+\.[0-9]+\.[0-9]+\.[0-9]+/\1: $VERSION/g" README.md
           
-          AFTER_COUNT=$(grep -o -E "$VERSION" README.md | wc -l || true)
+          AFTER_COUNT=$(grep -o -E "(Versão|Version): $VERSION" README.md | wc -l || true)
           echo "Found $AFTER_COUNT occurrences of $VERSION after replacement"
 
           echo "=== Changes made ==="
@@ -103,11 +103,11 @@ jobs:
         run: |
           if git diff --quiet README.md; then
             echo "No changes detected in README.md"
-            echo "has_changes=false" >> $GITHUB_OUTPUT
+            echo "has_changes=false" >> "$GITHUB_OUTPUT"
           else
             echo "Changes detected in README.md:"
             git diff README.md
-            echo "has_changes=true" >> $GITHUB_OUTPUT
+            echo "has_changes=true" >> "$GITHUB_OUTPUT"
           fi
       
       - name: Commit and push changes
